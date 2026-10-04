@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dot Motion"
+  short_description: "Create safe PNG sprites and simple 2D motion"
+  default_prompt: "Use Dot Motion Studio to inspect my PNG and create a sprite atlas or simple 2D motion."
