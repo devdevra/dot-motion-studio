@@ -735,7 +735,7 @@ build/                      Sites/Vite/Worker 통합
 
 [`CI`](https://github.com/devdevra/dot-motion-studio/actions)는 push와 pull request에 대해 `npm ci`, `npm test`, `npm run test:png`, `npm run typecheck`, `npm run build`, `npm run test:worker`를 실행합니다. 로컬·CI 통과와 실제 사용자 계정의 MCP 연결 성공은 각각 확인해야 합니다.
 
-### 10.3.1 2026-10-04 기능 점검과 수정 소스
+### 10.3.1 2026-10-04 v5 기능 점검과 수정 이력
 
 - `includeSequenceZip`에 불리언 이외의 값이 들어오면 `-32602` 오류로 거절하도록 수정했습니다. 생략·`false`·`true`의 정상 동작은 유지합니다.
 - 처리 중 FPS·격자·이동량 등 옵션을 바꾸면 이전 설정으로 만든 늦은 응답을 표시하지 않습니다. 옵션 변경 시 기존 결과와 다운로드를 비우고 새로 만들라는 중립적인 한국어 안내를 표시합니다.
@@ -745,9 +745,9 @@ build/                      Sites/Vite/Worker 통합
 - 공개 페이지의 데스크톱 화면과 **393 CSS 픽셀 너비** 레이아웃을 확인했습니다. 일반 브라우저 확대/축소로 확인한 반응형 점검이며 실제 Android 기기·터치 테스트는 아닙니다.
 - **아직 확인하지 못한 부분:** 실제 소유자 로그인 후 운영 환경의 업로드 → 검사 → 처리 → 브라우저 다운로드 전체 과정, 실제 MCP 플러그인 연결·인증, Android의 플러그인 설치·업데이트
 
-두 수정은 기존 [공개 Site](https://dot-motion-studio.jakeshin.chatgpt.site)의 v5에 배포되었습니다. 공개 범위·로그인 보호·기존 플러그인 식별자는 유지했습니다. Site 배포 성공과 실제 사용자 계정의 인증 처리·다운로드·MCP 연결 성공은 별도로 확인해야 합니다.
+두 수정은 기존 [공개 Site](https://dot-motion-studio.jakeshin.chatgpt.site)의 v5에 배포되었습니다. 이는 이전 배포 이력이며, 현재 운영 버전은 다음 절의 입력 검증 강화를 포함한 v6입니다. 공개 범위·로그인 보호·기존 플러그인 식별자는 유지했습니다. Site 배포 성공과 실제 사용자 계정의 인증 처리·다운로드·MCP 연결 성공은 별도로 확인해야 합니다.
 
-### 10.3.2 2026-10-04 입력 검증 강화 소스
+### 10.3.2 2026-10-04 v6 입력 검증 강화와 운영 배포
 
 추가 점검에서 발견한 세 가지 낮은 심각도의 입력 검증 문제를 수정했습니다.
 
@@ -757,7 +757,7 @@ build/                      Sites/Vite/Worker 통합
 
 기존 이미지·프레임·입출력 크기 제한은 유지합니다. 압축 입력은 1KiB씩 공급하고, 출력은 최대 16KiB의 작은 묶음마다 IHDR 크기와 비교하여 초과 즉시 중단합니다. 정상 입력의 PNG·JSON·ZIP 바이트는 기존 결과와 비교했습니다. 새 라이브러리는 입력 디코딩에만 사용하므로 출력 압축기는 바꾸지 않았습니다.
 
-**이 강화 소스의 운영 배포는 별도 승인 대기 중입니다. 현재 공개 Site에는 앞 절의 v5가 실행 중입니다.** GitHub 소스·검사 통과가 실제 Site 적용이나 MCP 연결 성공을 뜻하지 않습니다.
+**이 강화 소스는 사용자 승인 후 2026-10-04(UTC)에 기존 [공개 Site](https://dot-motion-studio.jakeshin.chatgpt.site)의 v6로 운영 배포되었으며, 배포 성공을 확인했습니다.** 공개 범위·로그인 보호·기존 MCP capability와 플러그인 식별자는 유지했습니다. [소스 커밋 `23c47cc`](https://github.com/devdevra/dot-motion-studio/commit/23c47cc059bbf45e442b1399e6d2b630a0d507ac)의 [GitHub CI](https://github.com/devdevra/dot-motion-studio/actions/runs/37198993707)도 설치·테스트·PNG 코퍼스·타입 검사·빌드·로컬 Worker 검사를 모두 통과했습니다. 운영 배포와 CI 성공은 실제 사용자 로그인·다운로드·MCP 연결 성공과 구분합니다.
 
 최종 로컬 검사에서 저장소 테스트 **111/111**, 별도 PNG 코퍼스 **2,034/2,034**, 빌드한 로컬 Worker 검사 **24/24**, 타입 검사와 빌드가 통과했습니다. 각 묶음은 범위가 겹치므로 합산하지 않습니다.
 

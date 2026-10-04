@@ -2,7 +2,7 @@
 
 2026-10-04 · Dot Motion Studio
 
-이 문서는 기존 v5 기능 점검 이후 발견한 세 가지 입력 검증 문제의 수정 내용과 한계를 기록합니다. **이 강화 소스는 운영 배포 승인 대기 중이며, 공개 Site에는 v5가 실행 중입니다.** 저장소 소스와 운영 버전을 혼동하지 마세요.
+이 문서는 기존 v5 기능 점검 이후 발견한 세 가지 입력 검증 문제의 수정 내용과 한계를 기록합니다. **이 강화 소스는 사용자 승인 후 2026-10-04(UTC)에 기존 [공개 Site](https://dot-motion-studio.jakeshin.chatgpt.site)의 v6로 운영 배포되었으며, 배포 성공을 확인했습니다.** 공개 범위·로그인 보호·기존 MCP capability와 플러그인 식별자는 유지했습니다. 실제 사용자 로그인·브라우저 다운로드·MCP 연결 및 운영 메모리 한도는 계속 별도 확인이 필요합니다.
 
 ## 수정 내용
 
@@ -54,7 +54,7 @@ PNG 입력 압축 해제만 정확한 버전으로 고정한 **pako 3.0.2**로 �
 - 실제 빌드한 로컬 Worker: **24/24 통과**. API·MCP 오류, 인증 경계, 출력 일치, 스트림 크기 거절 후 복구, 최대 픽셀 반복 검사
 - 최종 통합 소스의 타입 검사와 공식 Sites 빌드 통과
 
-최종 실행 결과는 해당 커밋의 GitHub Actions를 확인하세요. `npm run lint`는 별도 실행 시 기존 UI의 Next Link 규칙 오류 2개와 경고가 남아 있습니다. 이번 변경 때문에 새로 생긴 진단은 아니며, CI의 필수 검사에는 포함하지 않았습니다.
+[소스 커밋 `23c47cc`](https://github.com/devdevra/dot-motion-studio/commit/23c47cc059bbf45e442b1399e6d2b630a0d507ac)의 [GitHub Actions 실행](https://github.com/devdevra/dot-motion-studio/actions/runs/37198993707)은 설치·저장소 테스트·PNG 코퍼스·타입 검사·빌드·로컬 Worker 검사를 모두 통과했습니다. `npm run lint`는 별도 실행 시 기존 UI의 Next Link 규칙 오류 2개와 경고가 남아 있습니다. 이번 변경 때문에 새로 생긴 진단은 아니며, CI의 필수 검사에는 포함하지 않았습니다.
 
 ## 재현
 
