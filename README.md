@@ -149,6 +149,13 @@
 
 두 MP4는 변경하지 않은 로컬 엔진의 실제 PNG 출력을 별도 FFmpeg로 조립했습니다. 중간 포즈 보간이나 라이브 MCP 연결 성공을 시연하지 않습니다. 원본·출력·해시·제작 범위는 각 샘플 문서에서 확인할 수 있습니다.
 
+### 별도 60 FPS 버전
+
+- **[타이포그래픽 60 FPS MP4](docs/extra-cases/60fps/typography-ko-60fps.mp4)** · **[골프 스윙 60 FPS MP4](docs/extra-cases/60fps/golf-swing-ko-60fps.mp4)**
+- 두 영상 모두 10초·600프레임·고정 60 FPS이며, 원래 24 FPS 파일은 그대로 보존했습니다
+- 기존 화면을 3장·2장씩 반복 표시한 변환입니다. 새 글자 모션이나 골퍼 중간 포즈를 만들지 않았고, 원본 움직임의 단계감은 남습니다
+- [24→60 FPS 변환 원리·비교 이미지·재현·검증](docs/extra-cases/60fps/README.md)
+
 <a id="connect"></a>
 ## 4. ChatGPT·Codex와 연결하기
 

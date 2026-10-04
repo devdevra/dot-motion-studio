@@ -1,0 +1,362 @@
+{
+  "schemaVersion": 1,
+  "scope": "Separate 60 FPS hold-only conversions of two frozen, silent 10-second presentation videos.",
+  "ffmpegVersion": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "limitations": [
+    "No new source motion or AI poses are created.",
+    "60 FPS means 600 presentation frames in 10 seconds, using repeated source frames.",
+    "Original 24 FPS presentation changes remain quantized to the original timing, with up to 1/120 s delay on the 60 FPS grid.",
+    "H.264 CRF 18 is a new lossy encode; source MP4 files remain byte-identical.",
+    "Exact output bytes can differ with other FFmpeg/libx264 versions."
+  ],
+  "videos": [
+    {
+      "source": "../typography/typography-ko.mp4",
+      "sourceBytes": 187708,
+      "sourceSha256Before": "c5a95034e1542bf14df6af660a8a27e297172df8dc43d3b470402d1664d28122",
+      "sourceSha256After": "c5a95034e1542bf14df6af660a8a27e297172df8dc43d3b470402d1664d28122",
+      "sourceUnchanged": true,
+      "sourceMedia": {
+        "codec": "h264",
+        "profile": "High",
+        "pixelFormat": "yuv420p",
+        "width": 720,
+        "height": 720,
+        "rFrameRate": "24/1",
+        "avgFrameRate": "24/1",
+        "timeBase": "1/12288",
+        "encodedFrames": 240,
+        "decodedFrames": 240,
+        "streamDurationSeconds": "10.000000",
+        "durationSeconds": "10.000000",
+        "audio": false
+      },
+      "output": "typography-ko-60fps.mp4",
+      "outputBytes": 220973,
+      "outputSha256": "9ca5aa5d2117180b48ab7aa638689688bab39faa1d405ac4bd7713d9486052c1",
+      "outputMedia": {
+        "codec": "h264",
+        "profile": "High",
+        "pixelFormat": "yuv420p",
+        "width": 720,
+        "height": 720,
+        "rFrameRate": "60/1",
+        "avgFrameRate": "60/1",
+        "timeBase": "1/15360",
+        "encodedFrames": 600,
+        "decodedFrames": 600,
+        "streamDurationSeconds": "10.000000",
+        "durationSeconds": "10.000000",
+        "audio": false
+      },
+      "engineFps": 8,
+      "preparedSourceFrames": 16,
+      "presentationFpsBefore": 24,
+      "presentationFpsAfter": 60,
+      "presentation": "16 prepared typography frames, replayed at 8 FPS during 2-8 seconds; original titles and 24 FPS progress indicator preserved.",
+      "sourceEvidence": [
+        "../typography/typography-options.json",
+        "../typography/render-video.py"
+      ],
+      "command": [
+        "ffmpeg",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-y",
+        "-i",
+        "../typography/typography-ko.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-vf",
+        "fps=fps=60:start_time=0:round=up:eof_action=pass",
+        "-frames:v",
+        "600",
+        "-fps_mode",
+        "cfr",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "slow",
+        "-crf",
+        "18",
+        "-profile:v",
+        "high",
+        "-level:v",
+        "4.2",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-map_metadata",
+        "-1",
+        "-video_track_timescale",
+        "15360",
+        "-movflags",
+        "+faststart",
+        "typography-ko-60fps.mp4"
+      ],
+      "verification": {
+        "fullDecodePassed": true,
+        "exactCfrTiming": {
+          "checkedFrames": 600,
+          "allPtsEqualFrameIndexDiv60": true,
+          "allFrameDurationsEqual1Div60": true,
+          "firstPtsSeconds": "0",
+          "lastPtsSecondsExact": "599/60",
+          "endSecondsExact": "10"
+        },
+        "resampling": {
+          "filter": "fps=fps=60:start_time=0:round=up:eof_action=pass",
+          "sourceIndexForOutputN": "floor(n * 24 / 60) = floor(2*n/5)",
+          "outputFrames": 600,
+          "sourceFrames": 240,
+          "holdPattern": [
+            3,
+            2
+          ],
+          "all600ResamplerFramesPixelExactToMappedDecodedSource": true,
+          "opticalFlow": false,
+          "frameBlending": false,
+          "newPoses": false
+        },
+        "encodedOutputCorrespondence": {
+          "method": "Per-frame YUV SSIM against exact held source frame sequence",
+          "checkedFrames": 600,
+          "minimumAll": 0.998263,
+          "meanAll": 0.998932753,
+          "thresholdAll": 0.99,
+          "losslessEncode": false,
+          "note": "H.264 re-encoding changes some decoded pixels; this is not a pixel-identical copy."
+        },
+        "sameVersionRebuildByteIdentical": true,
+        "representativeVisualFrames": {
+          "contactSheet": "typography-60fps-review.png",
+          "samples": [
+            {
+              "outputFrame": 0,
+              "sourceFrame": 0
+            },
+            {
+              "outputFrame": 59,
+              "sourceFrame": 23
+            },
+            {
+              "outputFrame": 120,
+              "sourceFrame": 48
+            },
+            {
+              "outputFrame": 210,
+              "sourceFrame": 84
+            },
+            {
+              "outputFrame": 240,
+              "sourceFrame": 96
+            },
+            {
+              "outputFrame": 360,
+              "sourceFrame": 144
+            },
+            {
+              "outputFrame": 480,
+              "sourceFrame": 192
+            },
+            {
+              "outputFrame": 599,
+              "sourceFrame": 239
+            }
+          ],
+          "layout": "4 columns; each pair of rows shows source above output. Full-resolution decode is checked separately."
+        }
+      }
+    },
+    {
+      "source": "../golf-swing/golf-swing-ko.mp4",
+      "sourceBytes": 228640,
+      "sourceSha256Before": "9f9aec8679cfac11460cc8f2ba3d089546976e0b2fd282080eddb926b6eab31d",
+      "sourceSha256After": "9f9aec8679cfac11460cc8f2ba3d089546976e0b2fd282080eddb926b6eab31d",
+      "sourceUnchanged": true,
+      "sourceMedia": {
+        "codec": "h264",
+        "profile": "High",
+        "pixelFormat": "yuv420p",
+        "width": 1280,
+        "height": 720,
+        "rFrameRate": "24/1",
+        "avgFrameRate": "24/1",
+        "timeBase": "1/12288",
+        "encodedFrames": 240,
+        "decodedFrames": 240,
+        "streamDurationSeconds": "10.000000",
+        "durationSeconds": "10.000000",
+        "audio": false
+      },
+      "output": "golf-swing-ko-60fps.mp4",
+      "outputBytes": 402452,
+      "outputSha256": "9a5af084484241b242092582f2bec41ea5c3e7170f8e58cb232325c545f9469c",
+      "outputMedia": {
+        "codec": "h264",
+        "profile": "High",
+        "pixelFormat": "yuv420p",
+        "width": 1280,
+        "height": 720,
+        "rFrameRate": "60/1",
+        "avgFrameRate": "60/1",
+        "timeBase": "1/15360",
+        "encodedFrames": 600,
+        "decodedFrames": 600,
+        "streamDurationSeconds": "10.000000",
+        "durationSeconds": "10.000000",
+        "audio": false
+      },
+      "engineFps": 2,
+      "preparedSourceFrames": 8,
+      "presentationFpsBefore": 24,
+      "presentationFpsAfter": 60,
+      "presentation": "8 AI-prepared poses. First pass: 0-4 s, 0.50 s/pose (2 poses/s). Second pass: 4-10 s, 0.75 s/pose (4/3 poses/s). All original presentation timing preserved.",
+      "sourceEvidence": [
+        "../golf-swing/golf-swing-options.json",
+        "../golf-swing/render-demo.py"
+      ],
+      "command": [
+        "ffmpeg",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-y",
+        "-i",
+        "../golf-swing/golf-swing-ko.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-vf",
+        "fps=fps=60:start_time=0:round=up:eof_action=pass",
+        "-frames:v",
+        "600",
+        "-fps_mode",
+        "cfr",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "slow",
+        "-crf",
+        "18",
+        "-profile:v",
+        "high",
+        "-level:v",
+        "4.2",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-map_metadata",
+        "-1",
+        "-video_track_timescale",
+        "15360",
+        "-movflags",
+        "+faststart",
+        "golf-swing-ko-60fps.mp4"
+      ],
+      "verification": {
+        "fullDecodePassed": true,
+        "exactCfrTiming": {
+          "checkedFrames": 600,
+          "allPtsEqualFrameIndexDiv60": true,
+          "allFrameDurationsEqual1Div60": true,
+          "firstPtsSeconds": "0",
+          "lastPtsSecondsExact": "599/60",
+          "endSecondsExact": "10"
+        },
+        "resampling": {
+          "filter": "fps=fps=60:start_time=0:round=up:eof_action=pass",
+          "sourceIndexForOutputN": "floor(n * 24 / 60) = floor(2*n/5)",
+          "outputFrames": 600,
+          "sourceFrames": 240,
+          "holdPattern": [
+            3,
+            2
+          ],
+          "all600ResamplerFramesPixelExactToMappedDecodedSource": true,
+          "opticalFlow": false,
+          "frameBlending": false,
+          "newPoses": false
+        },
+        "encodedOutputCorrespondence": {
+          "method": "Per-frame YUV SSIM against exact held source frame sequence",
+          "checkedFrames": 600,
+          "minimumAll": 0.99914,
+          "meanAll": 0.999200138,
+          "thresholdAll": 0.99,
+          "losslessEncode": false,
+          "note": "H.264 re-encoding changes some decoded pixels; this is not a pixel-identical copy."
+        },
+        "sameVersionRebuildByteIdentical": true,
+        "representativeVisualFrames": {
+          "contactSheet": "golf-swing-60fps-review.png",
+          "samples": [
+            {
+              "outputFrame": 0,
+              "sourceFrame": 0
+            },
+            {
+              "outputFrame": 59,
+              "sourceFrame": 23
+            },
+            {
+              "outputFrame": 120,
+              "sourceFrame": 48
+            },
+            {
+              "outputFrame": 210,
+              "sourceFrame": 84
+            },
+            {
+              "outputFrame": 240,
+              "sourceFrame": 96
+            },
+            {
+              "outputFrame": 360,
+              "sourceFrame": 144
+            },
+            {
+              "outputFrame": 480,
+              "sourceFrame": 192
+            },
+            {
+              "outputFrame": 599,
+              "sourceFrame": 239
+            }
+          ],
+          "layout": "4 columns; each pair of rows shows source above output. Full-resolution decode is checked separately."
+        }
+      }
+    }
+  ],
+  "files": {
+    "README.md": {
+      "bytes": 3426,
+      "sha256": "9f2dac2119a78b84a5477fb623d1cfa2b87c7fcd9bf1c70e7af923f575b0feba"
+    },
+    "golf-swing-60fps-review.png": {
+      "bytes": 359461,
+      "sha256": "95317b354ccf92257679075855f18bdf82cde3bc209e927bed24fc82959c224e"
+    },
+    "golf-swing-ko-60fps.mp4": {
+      "bytes": 402452,
+      "sha256": "9a5af084484241b242092582f2bec41ea5c3e7170f8e58cb232325c545f9469c"
+    },
+    "reproduce.py": {
+      "bytes": 12315,
+      "sha256": "c9caacd1804146908edbd183dde7878de7fb1f2a76919f774ba367b3ae7d410e"
+    },
+    "typography-60fps-review.png": {
+      "bytes": 521170,
+      "sha256": "cb4ad5c153ef7c0bc577097c7712a525041f7b27b69a6911047dd8a4f9dc78a7"
+    },
+    "typography-ko-60fps.mp4": {
+      "bytes": 220973,
+      "sha256": "9ca5aa5d2117180b48ab7aa638689688bab39faa1d405ac4bd7713d9486052c1"
+    }
+  }
+}
