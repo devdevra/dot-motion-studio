@@ -1,0 +1,50 @@
+{
+  "dot-motion-demo-ko.mp4": {
+    "sha256": "36429cf3700c8bcef6eaa337a040161ddc21456d12e708c0d0fff020c6d5c695",
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "12/1",
+        "nb_frames": "288"
+      }
+    ],
+    "format": {
+      "duration": "24.000000",
+      "size": "337976"
+    }
+  },
+  "dot-motion-demo-ko.gif": {
+    "sha256": "596177334454f95681d14f5ada09a990bfa2a8abc5d20d590697a326bb518842",
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "gif",
+        "codec_type": "video",
+        "width": 768,
+        "height": 432,
+        "pix_fmt": "bgra",
+        "r_frame_rate": "8/1",
+        "nb_frames": "192"
+      }
+    ],
+    "format": {
+      "duration": "24.010000",
+      "size": "1519271"
+    },
+    "published": false,
+    "publication_status": "Generated and verified locally; not published in this repository"
+  },
+  "notes": [
+    "Silent explanatory video, not an app screen recording",
+    "All displayed ball animation frames came from the real local motion engine",
+    "MP4 and GIF are external FFmpeg compositions, not native engine exports",
+    "Caption bar is burned in; Korean SRT and WebVTT are supplied separately"
+  ]
+}

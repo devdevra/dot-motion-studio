@@ -1,0 +1,19 @@
+{
+  "name": "golf-ball",
+  "fps": 12,
+  "source": {
+    "kind": "single"
+  },
+  "alphaThreshold": 0,
+  "normalize": {
+    "padding": 0,
+    "align": "center",
+    "trim": false
+  },
+  "motion": {
+    "frames": 16,
+    "dx": 12,
+    "dy": 0
+  },
+  "atlasColumns": 4
+}

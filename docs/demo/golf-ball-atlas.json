@@ -1,0 +1,377 @@
+{
+  "frames": [
+    {
+      "filename": "golf-ball-001.png",
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 276,
+        "h": 96
+      },
+      "duration": 83
+    },
+    {
+      "filename": "golf-ball-002.png",
+      "frame": {
+        "x": 276,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 276,
+        "h": 96
+      },
+      "duration": 83
+    },
+    {
+      "filename": "golf-ball-003.png",
+      "frame": {
+        "x": 552,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 276,
+        "h": 96
+      },
+      "duration": 83
+    },
+    {
+      "filename": "golf-ball-004.png",
+      "frame": {
+        "x": 828,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 276,
+        "h": 96
+      },
+      "duration": 83
+    },
+    {
+      "filename": "golf-ball-005.png",
+      "frame": {
+        "x": 0,
+        "y": 96,
+        "w": 276,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 276,
+        "h": 96
+      },
+      "duration": 83
+    },
+    {
+      "filename": "golf-ball-006.png",
+      "frame": {
+        "x": 276,
+        "y": 96,
+        "w": 276,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 276,
+        "h": 96
+      },
+      "duration": 83
+    },
+    {
+      "filename": "golf-ball-007.png",
+      "frame": {
+        "x": 552,
+        "y": 96,
+        "w": 276,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 276,
+        "h": 96
+      },
+      "duration": 83
+    },
+    {
+      "filename": "golf-ball-008.png",
+      "frame": {
+        "x": 828,
+        "y": 96,
+        "w": 276,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 276,
+        "h": 96
+      },
+      "duration": 83
+    },
+    {
+      "filename": "golf-ball-009.png",
+      "frame": {
+        "x": 0,
+        "y": 192,
+        "w": 276,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 276,
+        "h": 96
+      },
+      "duration": 83
+    },
+    {
+      "filename": "golf-ball-010.png",
+      "frame": {
+        "x": 276,
+        "y": 192,
+        "w": 276,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 276,
+        "h": 96
+      },
+      "duration": 83
+    },
+    {
+      "filename": "golf-ball-011.png",
+      "frame": {
+        "x": 552,
+        "y": 192,
+        "w": 276,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 276,
+        "h": 96
+      },
+      "duration": 83
+    },
+    {
+      "filename": "golf-ball-012.png",
+      "frame": {
+        "x": 828,
+        "y": 192,
+        "w": 276,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 276,
+        "h": 96
+      },
+      "duration": 83
+    },
+    {
+      "filename": "golf-ball-013.png",
+      "frame": {
+        "x": 0,
+        "y": 288,
+        "w": 276,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 276,
+        "h": 96
+      },
+      "duration": 83
+    },
+    {
+      "filename": "golf-ball-014.png",
+      "frame": {
+        "x": 276,
+        "y": 288,
+        "w": 276,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 276,
+        "h": 96
+      },
+      "duration": 83
+    },
+    {
+      "filename": "golf-ball-015.png",
+      "frame": {
+        "x": 552,
+        "y": 288,
+        "w": 276,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 276,
+        "h": 96
+      },
+      "duration": 83
+    },
+    {
+      "filename": "golf-ball-016.png",
+      "frame": {
+        "x": 828,
+        "y": 288,
+        "w": 276,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 276,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 276,
+        "h": 96
+      },
+      "duration": 83
+    }
+  ],
+  "meta": {
+    "app": "Dot Motion Studio",
+    "version": "1.0",
+    "image": "golf-ball-atlas.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1104,
+      "h": 384
+    },
+    "scale": "1",
+    "fps": 12,
+    "frameCount": 16,
+    "frameSize": {
+      "w": 276,
+      "h": 96
+    },
+    "columns": 4,
+    "rows": 4,
+    "loop": true,
+    "animation": "ordered-frames"
+  }
+}

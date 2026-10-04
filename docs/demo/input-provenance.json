@@ -1,0 +1,21 @@
+{
+  "input": "golf-ball-input.png",
+  "source": "Original golf-ball illustration generated with the built-in image_gen tool for this demo",
+  "transparent_background": true,
+  "prompt": "Use case: product-mockup. Asset type: original tiny PNG sprite for an open-source 2D motion tool tutorial. Primary request: one single clean white golf ball, centered, with subtle round dimples, slightly cool shaded lower-right edge and soft overhead lighting. Orthographic front view, compact nearly circular silhouette, no perspective ground plane. Actual transparent background, no drop shadow outside the ball. No golf club, no person, no text, no logo, no border, no watermark, no extra objects. Composition: square image with generous transparent margin, ball occupying about 65 percent of canvas. Produce a small clean asset suitable for lossless downscaling to 80px; ball shape remains simple and clearly readable.",
+  "generation": {
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "bytes": 852959,
+    "sha256": "00bfdca73bd878435d8503e0e4d6e4416a5c039c94087d0b392fd5302d623948"
+  },
+  "preparation": {
+    "library": "Pillow",
+    "version": "12.3.0",
+    "operation": "Convert to RGBA, resize to 96x96 with Image.Resampling.LANCZOS, save PNG optimize=True",
+    "note": "The prompt suggested 80px suitability; final prepared engine input is 96x96px. Resizing is external demo preparation, not a Dot Motion engine operation."
+  },
+  "reproduction": "Checked-in 96x96 PNG is the fixed starting input. Regenerating the illustration is not deterministic and is not required.",
+  "content": "Single original golf-ball illustration; no personal user image, brand, external stock art or credentials"
+}
