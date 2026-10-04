@@ -1,0 +1,121 @@
+{
+  "scope": "External Pillow composition of real engine PNGs, encoded by FFmpeg. Silent conceptual animation, not a screen recording or native engine video output.",
+  "durationSeconds": 10,
+  "width": 1280,
+  "height": 720,
+  "fps": 24,
+  "encodedFrames": 240,
+  "poseFrames": 8,
+  "phaseOrder": [
+    "어드레스",
+    "테이크어웨이",
+    "백스윙",
+    "백스윙 톱",
+    "다운스윙",
+    "임팩트",
+    "릴리스",
+    "피니시"
+  ],
+  "passes": [
+    {
+      "start": 0,
+      "end": 4,
+      "holdSecondsPerPose": 0.5
+    },
+    {
+      "start": 4,
+      "end": 10,
+      "holdSecondsPerPose": 0.75
+    }
+  ],
+  "interpolation": false,
+  "audio": false,
+  "mp4Bytes": 228640,
+  "mp4Sha256": "9f9aec8679cfac11460cc8f2ba3d089546976e0b2fd282080eddb926b6eab31d",
+  "ffmpegVersion": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "width": 1280,
+        "height": 720,
+        "coded_width": 1280,
+        "coded_height": 720,
+        "closed_captions": 0,
+        "film_grain": 0,
+        "has_b_frames": 2,
+        "pix_fmt": "yuv420p",
+        "level": 31,
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "refs": 1,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "time_base": "1/12288",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 122880,
+        "duration": "10.000000",
+        "bit_rate": "179928",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "240",
+        "extradata_size": 46,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "vendor_id": "[0][0][0][0]",
+          "encoder": "Lavc61.19.101 libx264"
+        }
+      }
+    ],
+    "format": {
+      "filename": "golf-swing-ko.mp4",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "10.000000",
+      "size": "228640",
+      "bit_rate": "182912",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf61.7.103"
+      }
+    }
+  }
+}

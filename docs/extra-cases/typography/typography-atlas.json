@@ -1,0 +1,377 @@
+{
+  "frames": [
+    {
+      "filename": "typography-001.png",
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 128
+      },
+      "duration": 125
+    },
+    {
+      "filename": "typography-002.png",
+      "frame": {
+        "x": 240,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 128
+      },
+      "duration": 125
+    },
+    {
+      "filename": "typography-003.png",
+      "frame": {
+        "x": 480,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 128
+      },
+      "duration": 125
+    },
+    {
+      "filename": "typography-004.png",
+      "frame": {
+        "x": 720,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 128
+      },
+      "duration": 125
+    },
+    {
+      "filename": "typography-005.png",
+      "frame": {
+        "x": 0,
+        "y": 128,
+        "w": 240,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 128
+      },
+      "duration": 125
+    },
+    {
+      "filename": "typography-006.png",
+      "frame": {
+        "x": 240,
+        "y": 128,
+        "w": 240,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 128
+      },
+      "duration": 125
+    },
+    {
+      "filename": "typography-007.png",
+      "frame": {
+        "x": 480,
+        "y": 128,
+        "w": 240,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 128
+      },
+      "duration": 125
+    },
+    {
+      "filename": "typography-008.png",
+      "frame": {
+        "x": 720,
+        "y": 128,
+        "w": 240,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 128
+      },
+      "duration": 125
+    },
+    {
+      "filename": "typography-009.png",
+      "frame": {
+        "x": 0,
+        "y": 256,
+        "w": 240,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 128
+      },
+      "duration": 125
+    },
+    {
+      "filename": "typography-010.png",
+      "frame": {
+        "x": 240,
+        "y": 256,
+        "w": 240,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 128
+      },
+      "duration": 125
+    },
+    {
+      "filename": "typography-011.png",
+      "frame": {
+        "x": 480,
+        "y": 256,
+        "w": 240,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 128
+      },
+      "duration": 125
+    },
+    {
+      "filename": "typography-012.png",
+      "frame": {
+        "x": 720,
+        "y": 256,
+        "w": 240,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 128
+      },
+      "duration": 125
+    },
+    {
+      "filename": "typography-013.png",
+      "frame": {
+        "x": 0,
+        "y": 384,
+        "w": 240,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 128
+      },
+      "duration": 125
+    },
+    {
+      "filename": "typography-014.png",
+      "frame": {
+        "x": 240,
+        "y": 384,
+        "w": 240,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 128
+      },
+      "duration": 125
+    },
+    {
+      "filename": "typography-015.png",
+      "frame": {
+        "x": 480,
+        "y": 384,
+        "w": 240,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 128
+      },
+      "duration": 125
+    },
+    {
+      "filename": "typography-016.png",
+      "frame": {
+        "x": 720,
+        "y": 384,
+        "w": 240,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 128
+      },
+      "duration": 125
+    }
+  ],
+  "meta": {
+    "app": "Dot Motion Studio",
+    "version": "1.0",
+    "image": "typography-atlas.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 960,
+      "h": 512
+    },
+    "scale": "1",
+    "fps": 8,
+    "frameCount": 16,
+    "frameSize": {
+      "w": 240,
+      "h": 128
+    },
+    "columns": 4,
+    "rows": 4,
+    "loop": true,
+    "animation": "ordered-frames"
+  }
+}

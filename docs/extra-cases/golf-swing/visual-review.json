@@ -1,0 +1,74 @@
+{
+  "reviewedAssets": [
+    "golf-swing-ai-source.png",
+    "golf-swing-input.png",
+    "golf-swing-atlas.png",
+    "frames/golf-swing-001.png through frames/golf-swing-008.png",
+    "golf-swing-comparison.png",
+    "golf-swing-ko.mp4"
+  ],
+  "scope": "Conceptual visual coherence and artifact/phase order only. This is not professional golf, anatomical, coaching, grip-mechanics or biomechanical validation.",
+  "visualConclusion": "The intended eight-phase order is readable. Adult body proportions and the same broad right-handed target direction are maintained. No obvious giant head, extra club, detached grip, grossly broken shaft or clipped club end was identified. Both replay passes show corresponding labels and highlighted atlas cells.",
+  "phases": [
+    {
+      "phase": 1,
+      "label": "어드레스",
+      "observationKo": "두 손이 같은 낮은 그립에 모이고 샤프트가 지면의 공으로 연결됨. 작은 영상에서는 공/헤드가 겹쳐 보임."
+    },
+    {
+      "phase": 2,
+      "label": "테이크어웨이",
+      "observationKo": "그립과 클럽이 화면 왼쪽으로 이동. 두 손 접촉과 연속된 가는 샤프트가 보임."
+    },
+    {
+      "phase": 3,
+      "label": "백스윙",
+      "observationKo": "손이 왼쪽 어깨 쪽으로 올라가고 작은 아이언 헤드가 위에 보임. 클럽 끝이 셀 안에 있음."
+    },
+    {
+      "phase": 4,
+      "label": "백스윙 톱",
+      "observationKo": "두 손의 높은 그립과 머리 위 오른쪽으로 이어지는 샤프트가 보임. 지면 공이 보이지 않는 작은 연속성 오류가 남음."
+    },
+    {
+      "phase": 5,
+      "label": "다운스윙",
+      "observationKo": "손이 낮아지고 헤드가 뒤에 남아 있는 개념 표현. 단절된 샤프트는 보이지 않음."
+    },
+    {
+      "phase": 6,
+      "label": "임팩트",
+      "observationKo": "낮은 그립에서 공 위치까지 샤프트가 이어짐. 작은 출력에서 공과 헤드가 겹쳐 보임."
+    },
+    {
+      "phase": 7,
+      "label": "릴리스",
+      "observationKo": "팔과 클럽이 오른쪽으로 뻗고 공이 오른쪽에 표시됨. 독립적인 탄도/충돌 계산은 아님."
+    },
+    {
+      "phase": 8,
+      "label": "피니시",
+      "observationKo": "어깨 부근에 모인 양손 그립과 연속된 클럽, 들린 뒤꿈치가 보임. 팔/손은 단순화된 AI 그림임."
+    }
+  ],
+  "unresolvedLimitations": [
+    "The ground ball is not visible in phase 04.",
+    "At phases 01 and 06 the clubhead and ball overlap visually at small output size.",
+    "Apparent club length, head direction, body proportions and hand details vary somewhat across AI-generated key poses.",
+    "The top and finish hand/arm configurations are stylized; correct real-world grip or joint mechanics is not established.",
+    "Eight held key poses have discrete motion and a finish-to-address reset, not smooth interpolation or a seamless loop."
+  ],
+  "fullDecodedVideoVerification": {
+    "videoFramesChecked": 240,
+    "allExpectedPoseIndicesMatch": true,
+    "maxRgbMeanAbsoluteError": 0.7499246728650137,
+    "averageRgbMeanAbsoluteError": 0.6919741358901514,
+    "comparisonRegion": {
+      "x": 72,
+      "y": 230,
+      "width": 440,
+      "height": 352
+    },
+    "note": "All 240 decoded frames match the expected real-engine source pose by nearest mean absolute RGB error; no intermediate poses expected. This verifies assembly/order, not golf accuracy."
+  }
+}

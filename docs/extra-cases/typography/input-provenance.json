@@ -1,0 +1,27 @@
+{
+  "title": "골프의 순간",
+  "method": "Externally prepared deterministic font-rendered kinetic typography; not AI image generation and not an engine text-animation feature.",
+  "preparation": "Pillow 3x supersampling; five Hangul glyphs enter from alternating vertical directions; opacity, reveal line and cursor are prepared in each input cell.",
+  "font": {
+    "family": "Noto Sans CJK KR",
+    "collectionIndex": 1,
+    "boldSha256": "faa5f3656a78b2e2d450d27fe8382c778bc2b6bb5ea29c986664a6a435056ceb",
+    "regularSha256": "b76b0433203017ca80401b2ee0dd69350349871c4b19d504c34dbdd80541690a",
+    "license": "SIL Open Font License 1.1",
+    "fontFilesRedistributed": false
+  },
+  "source": {
+    "path": "typography-source.png",
+    "width": 960,
+    "height": 512,
+    "frameWidth": 240,
+    "frameHeight": 128,
+    "frameCount": 16,
+    "columns": 4,
+    "rows": 4,
+    "bytes": 66820,
+    "sha256": "d665cd5aa05feeed7b2cce2a2344c9de1e31d28dfb5c4c3ef8c580ec34cd4dfa"
+  },
+  "anchor": "Every cell retains the same 240x128 canvas and text layout; main type rests at y=44 and underline at y=98.",
+  "loop": "Reveal then hold; replay deliberately resets to the beginning. No seamless-loop claim."
+}

@@ -127,6 +127,28 @@
 
 **데모의 범위:** 입력 골프공 이미지는 데모용으로 별도의 이미지 생성 도구에서 만든 뒤 96×96 PNG로 준비한 에셋입니다. Studio는 그 한 장을 이동했으며 골프 스윙·새 포즈를 생성하지 않았습니다. MP4는 실제 출력 PNG를 별도의 FFmpeg 제작 과정으로 조립한 설명 자료이고, Studio의 네이티브 영상 출력이나 웹 UI 화면 녹화가 아닙니다. 이 로컬 엔진 실행은 실서비스의 MCP 플러그인 연결 성공을 의미하지 않습니다.
 
+
+### 추가 샘플: 한글 타이포그래픽과 골프 스윙
+
+**한글 타이포그래픽 · “골프의 순간”**
+
+[![한글 타이포그래픽 영상 포스터](docs/extra-cases/typography/typography-poster.png)](docs/extra-cases/typography/typography-ko.mp4)
+
+- **[10초 한국어 MP4](docs/extra-cases/typography/typography-ko.mp4)**: 720×720, 24 FPS, 무음
+- [원본·출력 비교](docs/extra-cases/typography/typography-comparison.png) · [PNG 시퀀스 ZIP](docs/extra-cases/typography/typography-frames.zip) · [설정·검증·재현](docs/extra-cases/typography/README.md)
+- 정확한 한글은 Noto Sans CJK 폰트로 외부에서 준비한 16프레임입니다. 엔진은 이미 그려진 글자 프레임을 분리하고 아틀라스·JSON·ZIP을 출력합니다. 글자 모션 생성 기능을 뜻하지 않습니다.
+
+**골프 스윙 · 8개 AI 키 포즈**
+
+[![골프 스윙 영상 포스터](docs/extra-cases/golf-swing/golf-swing-poster.png)](docs/extra-cases/golf-swing/golf-swing-ko.mp4)
+
+- **[10초 한국어 MP4](docs/extra-cases/golf-swing/golf-swing-ko.mp4)**: 1280×720, 24 FPS, 무음
+- [입력·출력 비교](docs/extra-cases/golf-swing/golf-swing-comparison.png) · [준비된 입력 PNG](docs/extra-cases/golf-swing/golf-swing-input.png) · [PNG 시퀀스 ZIP](docs/extra-cases/golf-swing/golf-swing-frames.zip) · [설정·검증·재현](docs/extra-cases/golf-swing/README.md)
+- 성인 골퍼의 개념 애니메이션이며 골프 지도·자세 교정·생체역학 검증 자료가 아닙니다. 04번 포즈의 공 누락, 01·06번 공과 클럽 헤드 겹침, 포즈별 비례·투영 길이 차이가 남습니다.
+- AI 원본 PNG 공개와 원본 준비 단계의 공개 재현은 대기 중입니다. 현재 공개된 준비 입력에서 엔진 추출·아틀라스·ZIP과 영상 조립은 재현할 수 있습니다.
+
+두 MP4는 변경하지 않은 로컬 엔진의 실제 PNG 출력을 별도 FFmpeg로 조립했습니다. 중간 포즈 보간이나 라이브 MCP 연결 성공을 시연하지 않습니다. 원본·출력·해시·제작 범위는 각 샘플 문서에서 확인할 수 있습니다.
+
 <a id="connect"></a>
 ## 4. ChatGPT·Codex와 연결하기
 

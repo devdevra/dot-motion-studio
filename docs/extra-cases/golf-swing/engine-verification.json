@@ -1,0 +1,274 @@
+{
+  "scope": "Local unchanged production runPipeline; not live MCP or UI verification",
+  "engine": {
+    "path": "lib/motion-engine.mjs",
+    "sha256": "00f584ec0799072983f80914929fc7ddf304731be28ab773b0c31fa1f9277659",
+    "unchanged": true
+  },
+  "input": {
+    "path": "golf-swing-input.png",
+    "bytes": 131237,
+    "sha256": "17ed49cdeab331a13028e892d56c915aa77839db3993b8d392d0cc9b61325876",
+    "inspection": {
+      "width": 768,
+      "height": 384,
+      "bitDepth": 8,
+      "colorType": 6,
+      "pixelCount": 294912,
+      "interlaced": false,
+      "hasAlphaChannel": true,
+      "hasTransparencyMetadata": false,
+      "opaquePixels": 2722,
+      "transparentPixels": 248178,
+      "partialAlphaPixels": 44012,
+      "hasTransparency": true,
+      "bounds": {
+        "x": 41,
+        "y": 21,
+        "width": 700,
+        "height": 354
+      }
+    }
+  },
+  "options": {
+    "name": "golf-swing",
+    "fps": 2,
+    "source": {
+      "kind": "grid",
+      "columns": 4,
+      "rows": 2,
+      "count": 8,
+      "margin": 0,
+      "spacing": 0
+    },
+    "alphaThreshold": 0,
+    "normalize": {
+      "trim": false,
+      "padding": 0,
+      "width": 192,
+      "height": 192,
+      "align": "center"
+    },
+    "atlasColumns": 4
+  },
+  "summary": {
+    "frameCount": 8,
+    "frameWidth": 192,
+    "frameHeight": 192,
+    "atlasWidth": 768,
+    "atlasHeight": 384,
+    "fps": 2
+  },
+  "budgets": {
+    "inputPixels": 294912,
+    "framePixels": 294912,
+    "atlasPixels": 294912,
+    "combinedOutputPixels": 589824,
+    "maxCombinedOutputPixels": 1000000
+  },
+  "files": {
+    "golf-swing-atlas.png": {
+      "bytes": 142982,
+      "sha256": "ebc0f3d2cd84dd1bfdf3dd10d529c98e4a4a1dbcfe4f3c761162bc0956d71746"
+    },
+    "golf-swing-atlas.json": {
+      "bytes": 3510,
+      "sha256": "a73619a9742dba7975351a162e5320c753a347ba066c9599421e83ed284391db"
+    },
+    "golf-swing-frames.zip": {
+      "bytes": 151989,
+      "sha256": "349cf8a501308170b02abccd2f0e7107b56c97ca17c55a131f2307b61473dfc5"
+    },
+    "golf-swing-options.json": {
+      "bytes": 323,
+      "sha256": "8622446b2a83063de7dedcaf67aea2e5e98a61077f305872db18ddd200d720d6"
+    }
+  },
+  "frames": [
+    {
+      "name": "golf-swing-001.png",
+      "bytes": 18587,
+      "sha256": "bb608c3185939cb9652ac405a8498798616b1438404dd698a78ac16b7f3ce01b",
+      "sourceCellExactMatch": true,
+      "atlasCellExactMatch": true,
+      "nextFrameDifferentPixels": 6791,
+      "inspection": {
+        "width": 192,
+        "height": 192,
+        "opaquePixels": 334,
+        "transparentPixels": 30934,
+        "partialAlphaPixels": 5596,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 57,
+          "y": 36,
+          "width": 125,
+          "height": 148
+        }
+      }
+    },
+    {
+      "name": "golf-swing-002.png",
+      "bytes": 18536,
+      "sha256": "62c414126b3c3e51cc69eae2706402ed7a6c18f6ee1eb8f4761040626924475d",
+      "sourceCellExactMatch": true,
+      "atlasCellExactMatch": true,
+      "nextFrameDifferentPixels": 6787,
+      "inspection": {
+        "width": 192,
+        "height": 192,
+        "opaquePixels": 343,
+        "transparentPixels": 31075,
+        "partialAlphaPixels": 5446,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 0,
+          "y": 42,
+          "width": 134,
+          "height": 140
+        }
+      }
+    },
+    {
+      "name": "golf-swing-003.png",
+      "bytes": 18415,
+      "sha256": "2d77589ab79f9522bf649e26760592db13f11160740a6155d41c93c299c2f46c",
+      "sourceCellExactMatch": true,
+      "atlasCellExactMatch": true,
+      "nextFrameDifferentPixels": 6789,
+      "inspection": {
+        "width": 192,
+        "height": 192,
+        "opaquePixels": 355,
+        "transparentPixels": 31140,
+        "partialAlphaPixels": 5369,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 4,
+          "y": 21,
+          "width": 131,
+          "height": 163
+        }
+      }
+    },
+    {
+      "name": "golf-swing-004.png",
+      "bytes": 17670,
+      "sha256": "c638f79b66a48f9defe9a0109242d291917f0824c3d46eec2a7dc2e29923455b",
+      "sourceCellExactMatch": true,
+      "atlasCellExactMatch": true,
+      "nextFrameDifferentPixels": 7088,
+      "inspection": {
+        "width": 192,
+        "height": 192,
+        "opaquePixels": 342,
+        "transparentPixels": 31326,
+        "partialAlphaPixels": 5196,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 58,
+          "y": 40,
+          "width": 98,
+          "height": 142
+        }
+      }
+    },
+    {
+      "name": "golf-swing-005.png",
+      "bytes": 18180,
+      "sha256": "e5eb84ec223d2209e2f973f009341f50f45250ce0c80c854c0f598a97fd33e94",
+      "sourceCellExactMatch": true,
+      "atlasCellExactMatch": true,
+      "nextFrameDifferentPixels": 6940,
+      "inspection": {
+        "width": 192,
+        "height": 192,
+        "opaquePixels": 307,
+        "transparentPixels": 31067,
+        "partialAlphaPixels": 5490,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 41,
+          "y": 31,
+          "width": 94,
+          "height": 152
+        }
+      }
+    },
+    {
+      "name": "golf-swing-006.png",
+      "bytes": 18487,
+      "sha256": "ecec533b3fcda3e18aff9cc6eaee5fd754342c3e20dbcdf86a0276f03d5e663c",
+      "sourceCellExactMatch": true,
+      "atlasCellExactMatch": true,
+      "nextFrameDifferentPixels": 7268,
+      "inspection": {
+        "width": 192,
+        "height": 192,
+        "opaquePixels": 341,
+        "transparentPixels": 30962,
+        "partialAlphaPixels": 5561,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 5,
+          "y": 23,
+          "width": 142,
+          "height": 160
+        }
+      }
+    },
+    {
+      "name": "golf-swing-007.png",
+      "bytes": 18693,
+      "sha256": "ead916f8654f523609a23f7a6da272c882a490f06c36f677af5a9bc362649d8d",
+      "sourceCellExactMatch": true,
+      "atlasCellExactMatch": true,
+      "nextFrameDifferentPixels": 7834,
+      "inspection": {
+        "width": 192,
+        "height": 192,
+        "opaquePixels": 348,
+        "transparentPixels": 30836,
+        "partialAlphaPixels": 5680,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 55,
+          "y": 24,
+          "width": 133,
+          "height": 158
+        }
+      }
+    },
+    {
+      "name": "golf-swing-008.png",
+      "bytes": 18876,
+      "sha256": "a4fba0fea59dd3a651fc536ca60b05fcc1b940482f20ed76f6d6090dbaf7876d",
+      "sourceCellExactMatch": true,
+      "atlasCellExactMatch": true,
+      "nextFrameDifferentPixels": 7957,
+      "inspection": {
+        "width": 192,
+        "height": 192,
+        "opaquePixels": 352,
+        "transparentPixels": 30838,
+        "partialAlphaPixels": 5674,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 55,
+          "y": 34,
+          "width": 110,
+          "height": 149
+        }
+      }
+    }
+  ],
+  "verification": {
+    "sourceCellOrderAndPixels": true,
+    "atlasFramePixels": true,
+    "zipEntries": 9,
+    "repeatPipelineByteIdentical": true,
+    "nonzeroAlphaPreserved": true,
+    "invisibleRgbCanonicalizedAtAlphaZero": true
+  },
+  "limitations": "The engine only extracts pre-drawn AI poses. Loop metadata is a playback hint; it does not guarantee seamless motion or swing accuracy."
+}

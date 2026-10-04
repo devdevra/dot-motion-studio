@@ -1,0 +1,21 @@
+{
+  "name": "typography",
+  "fps": 8,
+  "source": {
+    "kind": "grid",
+    "columns": 4,
+    "rows": 4,
+    "count": 16,
+    "margin": 0,
+    "spacing": 0
+  },
+  "alphaThreshold": 0,
+  "normalize": {
+    "trim": false,
+    "padding": 0,
+    "width": 240,
+    "height": 128,
+    "align": "center"
+  },
+  "atlasColumns": 4
+}

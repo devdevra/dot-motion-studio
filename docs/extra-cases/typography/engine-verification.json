@@ -1,0 +1,433 @@
+{
+  "scope": "Actual unchanged local production runPipeline; not live MCP, UI capture, or native engine video export",
+  "engine": {
+    "path": "lib/motion-engine.mjs",
+    "sha256": "00f584ec0799072983f80914929fc7ddf304731be28ab773b0c31fa1f9277659"
+  },
+  "options": {
+    "name": "typography",
+    "fps": 8,
+    "source": {
+      "kind": "grid",
+      "columns": 4,
+      "rows": 4,
+      "count": 16,
+      "margin": 0,
+      "spacing": 0
+    },
+    "alphaThreshold": 0,
+    "normalize": {
+      "trim": false,
+      "padding": 0,
+      "width": 240,
+      "height": 128,
+      "align": "center"
+    },
+    "atlasColumns": 4
+  },
+  "limits": {
+    "maxInputBytes": 2097152,
+    "maxInputPixels": 1000000,
+    "maxOutputPixels": 1000000,
+    "maxDimension": 4096,
+    "maxFrames": 64,
+    "maxChunks": 4096
+  },
+  "input": {
+    "bytes": 66820,
+    "sha256": "d665cd5aa05feeed7b2cce2a2344c9de1e31d28dfb5c4c3ef8c580ec34cd4dfa",
+    "inspection": {
+      "width": 960,
+      "height": 512,
+      "bitDepth": 8,
+      "colorType": 6,
+      "pixelCount": 491520,
+      "interlaced": false,
+      "hasAlphaChannel": true,
+      "hasTransparencyMetadata": false,
+      "opaquePixels": 17648,
+      "transparentPixels": 397169,
+      "partialAlphaPixels": 76703,
+      "hasTransparency": true,
+      "bounds": {
+        "x": 14,
+        "y": 10,
+        "width": 932,
+        "height": 491
+      }
+    }
+  },
+  "summary": {
+    "frameCount": 16,
+    "frameWidth": 240,
+    "frameHeight": 128,
+    "atlasWidth": 960,
+    "atlasHeight": 512,
+    "fps": 8
+  },
+  "combinedFrameAndAtlasPixels": 983040,
+  "checks": {
+    "exactRgbaPixelMatch": true,
+    "rowMajorFrameOrder": true,
+    "alphaPreserved": true,
+    "fixedCanvasAnchorPreserved": true,
+    "zipEntryCount": 17,
+    "resetLoopIntentional": true
+  },
+  "products": {
+    "typography-atlas.png": {
+      "bytes": 55755,
+      "sha256": "d4a47f48b4cfe72db7ea0a0339f9dcdcb513cb6e18986b793b9aa244e8584dab"
+    },
+    "typography-atlas.json": {
+      "bytes": 6627,
+      "sha256": "5148965a2ca77702b49e99c5b0e261c6c538ae471c8f8bcce6a7a433e3dde48b"
+    },
+    "typography-frames.zip": {
+      "bytes": 129531,
+      "sha256": "57611641b8d21ca8da976df4ed21562019c06c6d7307b238eef7518897e048ec"
+    },
+    "typography-options.json": {
+      "bytes": 324,
+      "sha256": "841b3b78fb6e08a8427ed697dd2b46d0816defd8b0e3cd342baae435b5adfdc0"
+    }
+  },
+  "frames": [
+    {
+      "name": "typography-001.png",
+      "bytes": 3218,
+      "sha256": "6875e52625cd44d47ac0fc4431dfc99fe26e3264e167f7e319e8d31c67e0fabf",
+      "inspection": {
+        "width": 240,
+        "height": 128,
+        "opaquePixels": 32,
+        "transparentPixels": 28959,
+        "partialAlphaPixels": 1729,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 14,
+          "y": 10,
+          "width": 86,
+          "height": 107
+        }
+      },
+      "sourcePixelMatch": true,
+      "atlasPixelMatch": true
+    },
+    {
+      "name": "typography-002.png",
+      "bytes": 5083,
+      "sha256": "2cc346895291662b8025ec61b94a80c662533e8e59d376a53f0d88c39f9c04f1",
+      "inspection": {
+        "width": 240,
+        "height": 128,
+        "opaquePixels": 55,
+        "transparentPixels": 27087,
+        "partialAlphaPixels": 3578,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 16,
+          "y": 10,
+          "width": 115,
+          "height": 107
+        }
+      },
+      "sourcePixelMatch": true,
+      "atlasPixelMatch": true
+    },
+    {
+      "name": "typography-003.png",
+      "bytes": 6716,
+      "sha256": "72e8d3b529467debee2bbecfb383d4a818c6020d1b99a79d2c384b6909e8d600",
+      "inspection": {
+        "width": 240,
+        "height": 128,
+        "opaquePixels": 288,
+        "transparentPixels": 25948,
+        "partialAlphaPixels": 4484,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 16,
+          "y": 10,
+          "width": 166,
+          "height": 107
+        }
+      },
+      "sourcePixelMatch": true,
+      "atlasPixelMatch": true
+    },
+    {
+      "name": "typography-004.png",
+      "bytes": 8047,
+      "sha256": "acd0ac7d9cba7dfe81cdaf06a9b1aef12bb7514c7f49e82aed374922a94e3758",
+      "inspection": {
+        "width": 240,
+        "height": 128,
+        "opaquePixels": 680,
+        "transparentPixels": 24861,
+        "partialAlphaPixels": 5179,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 16,
+          "y": 10,
+          "width": 207,
+          "height": 107
+        }
+      },
+      "sourcePixelMatch": true,
+      "atlasPixelMatch": true
+    },
+    {
+      "name": "typography-005.png",
+      "bytes": 8251,
+      "sha256": "6b9adcce6a914a4a43b09f3af58aad597faaa8f155c6fed4597afc9417499137",
+      "inspection": {
+        "width": 240,
+        "height": 128,
+        "opaquePixels": 984,
+        "transparentPixels": 24577,
+        "partialAlphaPixels": 5159,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 16,
+          "y": 10,
+          "width": 207,
+          "height": 107
+        }
+      },
+      "sourcePixelMatch": true,
+      "atlasPixelMatch": true
+    },
+    {
+      "name": "typography-006.png",
+      "bytes": 8159,
+      "sha256": "d03442342a9d446a48704260e9b334eac8e477db99e147675b6fd9f799c52280",
+      "inspection": {
+        "width": 240,
+        "height": 128,
+        "opaquePixels": 1360,
+        "transparentPixels": 24444,
+        "partialAlphaPixels": 4916,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 16,
+          "y": 10,
+          "width": 207,
+          "height": 107
+        }
+      },
+      "sourcePixelMatch": true,
+      "atlasPixelMatch": true
+    },
+    {
+      "name": "typography-007.png",
+      "bytes": 8233,
+      "sha256": "317f482eeb00b6c10d1d28e31e2e2ec216b8fc39d4aa7e6bdcda1dbf38faf9e2",
+      "inspection": {
+        "width": 240,
+        "height": 128,
+        "opaquePixels": 1402,
+        "transparentPixels": 24321,
+        "partialAlphaPixels": 4997,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 16,
+          "y": 10,
+          "width": 207,
+          "height": 107
+        }
+      },
+      "sourcePixelMatch": true,
+      "atlasPixelMatch": true
+    },
+    {
+      "name": "typography-008.png",
+      "bytes": 8133,
+      "sha256": "5ba106475cfe5fe674e05c0e951894bc21d183f9025c6b2d94fed17b6b68652a",
+      "inspection": {
+        "width": 240,
+        "height": 128,
+        "opaquePixels": 1407,
+        "transparentPixels": 24228,
+        "partialAlphaPixels": 5085,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 16,
+          "y": 10,
+          "width": 207,
+          "height": 107
+        }
+      },
+      "sourcePixelMatch": true,
+      "atlasPixelMatch": true
+    },
+    {
+      "name": "typography-009.png",
+      "bytes": 8149,
+      "sha256": "be3e793d5918f92096329fd348b9c8170a64065b10ebf8551ff032457bb1340a",
+      "inspection": {
+        "width": 240,
+        "height": 128,
+        "opaquePixels": 1430,
+        "transparentPixels": 24093,
+        "partialAlphaPixels": 5197,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 16,
+          "y": 10,
+          "width": 208,
+          "height": 107
+        }
+      },
+      "sourcePixelMatch": true,
+      "atlasPixelMatch": true
+    },
+    {
+      "name": "typography-010.png",
+      "bytes": 8150,
+      "sha256": "3980e50b2e485cc8975e88d35ab449f31a82c1f7b505353f057d0eda652ebe38",
+      "inspection": {
+        "width": 240,
+        "height": 128,
+        "opaquePixels": 1430,
+        "transparentPixels": 24093,
+        "partialAlphaPixels": 5197,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 16,
+          "y": 10,
+          "width": 208,
+          "height": 107
+        }
+      },
+      "sourcePixelMatch": true,
+      "atlasPixelMatch": true
+    },
+    {
+      "name": "typography-011.png",
+      "bytes": 8149,
+      "sha256": "c7efa694fae151bee412d4ac583afb0cf7142d8dae352ff4a9efd6b77a1b15f8",
+      "inspection": {
+        "width": 240,
+        "height": 128,
+        "opaquePixels": 1430,
+        "transparentPixels": 24093,
+        "partialAlphaPixels": 5197,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 16,
+          "y": 10,
+          "width": 208,
+          "height": 107
+        }
+      },
+      "sourcePixelMatch": true,
+      "atlasPixelMatch": true
+    },
+    {
+      "name": "typography-012.png",
+      "bytes": 8129,
+      "sha256": "0cc17d26ca06c4939669b582b85662919b78b81c4ba1007e116b0da9c36bc6e9",
+      "inspection": {
+        "width": 240,
+        "height": 128,
+        "opaquePixels": 1430,
+        "transparentPixels": 24093,
+        "partialAlphaPixels": 5197,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 16,
+          "y": 10,
+          "width": 208,
+          "height": 107
+        }
+      },
+      "sourcePixelMatch": true,
+      "atlasPixelMatch": true
+    },
+    {
+      "name": "typography-013.png",
+      "bytes": 8149,
+      "sha256": "41de91c142e7507361f00dc161ab7e5dfa1dea02901693aa694eb77f9f8cc14e",
+      "inspection": {
+        "width": 240,
+        "height": 128,
+        "opaquePixels": 1430,
+        "transparentPixels": 24093,
+        "partialAlphaPixels": 5197,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 16,
+          "y": 10,
+          "width": 208,
+          "height": 107
+        }
+      },
+      "sourcePixelMatch": true,
+      "atlasPixelMatch": true
+    },
+    {
+      "name": "typography-014.png",
+      "bytes": 8129,
+      "sha256": "56c3553888a8d134e5a655156a2c2c469230dfd59c9276e4ecf1fff4d3e44558",
+      "inspection": {
+        "width": 240,
+        "height": 128,
+        "opaquePixels": 1430,
+        "transparentPixels": 24093,
+        "partialAlphaPixels": 5197,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 16,
+          "y": 10,
+          "width": 208,
+          "height": 107
+        }
+      },
+      "sourcePixelMatch": true,
+      "atlasPixelMatch": true
+    },
+    {
+      "name": "typography-015.png",
+      "bytes": 8149,
+      "sha256": "428b605af9ccf238e92d786e6b5a3249453850023593ae96c8656d0c4d97deec",
+      "inspection": {
+        "width": 240,
+        "height": 128,
+        "opaquePixels": 1430,
+        "transparentPixels": 24093,
+        "partialAlphaPixels": 5197,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 16,
+          "y": 10,
+          "width": 208,
+          "height": 107
+        }
+      },
+      "sourcePixelMatch": true,
+      "atlasPixelMatch": true
+    },
+    {
+      "name": "typography-016.png",
+      "bytes": 8129,
+      "sha256": "1314c89bf8b787e78a1e61af41a7acb96e2c507374b9a10cb00be1c634babd52",
+      "inspection": {
+        "width": 240,
+        "height": 128,
+        "opaquePixels": 1430,
+        "transparentPixels": 24093,
+        "partialAlphaPixels": 5197,
+        "hasTransparency": true,
+        "bounds": {
+          "x": 16,
+          "y": 10,
+          "width": 210,
+          "height": 107
+        }
+      },
+      "sourcePixelMatch": true,
+      "atlasPixelMatch": true
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "review": "Visual inspection of actual decoded MP4 frames, not only render inputs",
+  "videoSha256": "c5a95034e1542bf14df6af660a8a27e297172df8dc43d3b470402d1664d28122",
+  "reviewedVideoFrames": [
+    24,
+    48,
+    57,
+    66,
+    75,
+    84,
+    90,
+    114,
+    144,
+    168,
+    216
+  ],
+  "mobilePreviewWidth": 360,
+  "findings": {
+    "koreanHeadlineReadable": true,
+    "mainPhraseCorrect": "골프의 순간",
+    "burnedInCaptionsReadableAtMobileWidth": true,
+    "noTextClippingOrOverlap": true,
+    "sourceAndOutputRolesLabeled": true,
+    "intentionalResetAtRepeatReviewed": true,
+    "frameOrderMatchesRevealThenHold": true
+  },
+  "limits": "Secondary small technical labels are intended for full-size viewing; the principal phrase, headline and caption are readable at 360 px."
+}

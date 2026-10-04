@@ -1,0 +1,301 @@
+{
+  "generationTool": "built-in image_gen.imagegen",
+  "original": "golf-swing-ai-source.png",
+  "originalDimensions": [
+    1774,
+    887
+  ],
+  "originalBytes": 662869,
+  "originalSha256": "2fc87c1ea8f8a5cb584b1168a40fb813817dd97470bf98ac8d222043936e961f",
+  "engineInput": "golf-swing-input.png",
+  "inputDimensions": [
+    768,
+    384
+  ],
+  "inputBytes": 131237,
+  "inputSha256": "17ed49cdeab331a13028e892d56c915aa77839db3993b8d392d0cc9b61325876",
+  "operations": [
+    "Equal 4x2 grid crop with rounded source boundaries",
+    "Common 0.40 scale, Pillow LANCZOS; integer dimensions differ by at most one pixel",
+    "Rigid whole-cell placement at measured foot-midpoint and baseline (96,180)",
+    "4x2 assembly of transparent 192x192 cells; non-interlaced RGBA PNG encoding"
+  ],
+  "notPerformed": [
+    "Pose generation by code",
+    "Repainting or club/anatomy repair",
+    "Semantic background removal",
+    "Per-limb transforms",
+    "Frame interpolation",
+    "Physics simulation"
+  ],
+  "alphaUsedForAnchorOnly": 128,
+  "alphaThresholdAppliedByPreparation": false,
+  "placements": [
+    {
+      "phase": 1,
+      "sourceRect": [
+        0,
+        0,
+        444,
+        444
+      ],
+      "sourceFootAnchor": [
+        228.0,
+        424
+      ],
+      "targetFootAnchor": [
+        96,
+        180
+      ],
+      "scaledSize": [
+        178,
+        178
+      ],
+      "pasteOffset": [
+        5,
+        10
+      ],
+      "outputOpaqueBounds": [
+        60,
+        39,
+        133,
+        180
+      ],
+      "opaquePixelsClipped": 0
+    },
+    {
+      "phase": 2,
+      "sourceRect": [
+        444,
+        0,
+        887,
+        444
+      ],
+      "sourceFootAnchor": [
+        254.5,
+        423
+      ],
+      "targetFootAnchor": [
+        96,
+        180
+      ],
+      "scaledSize": [
+        177,
+        178
+      ],
+      "pasteOffset": [
+        -6,
+        10
+      ],
+      "outputOpaqueBounds": [
+        7,
+        45,
+        132,
+        180
+      ],
+      "opaquePixelsClipped": 0
+    },
+    {
+      "phase": 3,
+      "sourceRect": [
+        887,
+        0,
+        1330,
+        444
+      ],
+      "sourceFootAnchor": [
+        248.0,
+        423
+      ],
+      "targetFootAnchor": [
+        96,
+        180
+      ],
+      "scaledSize": [
+        177,
+        178
+      ],
+      "pasteOffset": [
+        -3,
+        10
+      ],
+      "outputOpaqueBounds": [
+        48,
+        23,
+        132,
+        180
+      ],
+      "opaquePixelsClipped": 0
+    },
+    {
+      "phase": 4,
+      "sourceRect": [
+        1330,
+        0,
+        1774,
+        444
+      ],
+      "sourceFootAnchor": [
+        230.0,
+        423
+      ],
+      "targetFootAnchor": [
+        96,
+        180
+      ],
+      "scaledSize": [
+        178,
+        178
+      ],
+      "pasteOffset": [
+        4,
+        10
+      ],
+      "outputOpaqueBounds": [
+        61,
+        43,
+        153,
+        180
+      ],
+      "opaquePixelsClipped": 0
+    },
+    {
+      "phase": 5,
+      "sourceRect": [
+        0,
+        444,
+        444,
+        887
+      ],
+      "sourceFootAnchor": [
+        246.5,
+        393
+      ],
+      "targetFootAnchor": [
+        96,
+        180
+      ],
+      "scaledSize": [
+        178,
+        177
+      ],
+      "pasteOffset": [
+        -3,
+        23
+      ],
+      "outputOpaqueBounds": [
+        43,
+        34,
+        133,
+        180
+      ],
+      "opaquePixelsClipped": 0
+    },
+    {
+      "phase": 6,
+      "sourceRect": [
+        444,
+        444,
+        887,
+        887
+      ],
+      "sourceFootAnchor": [
+        250.5,
+        394
+      ],
+      "targetFootAnchor": [
+        96,
+        180
+      ],
+      "scaledSize": [
+        177,
+        177
+      ],
+      "pasteOffset": [
+        -4,
+        23
+      ],
+      "outputOpaqueBounds": [
+        57,
+        44,
+        135,
+        180
+      ],
+      "opaquePixelsClipped": 0
+    },
+    {
+      "phase": 7,
+      "sourceRect": [
+        887,
+        444,
+        1330,
+        887
+      ],
+      "sourceFootAnchor": [
+        211.5,
+        395
+      ],
+      "targetFootAnchor": [
+        96,
+        180
+      ],
+      "scaledSize": [
+        177,
+        177
+      ],
+      "pasteOffset": [
+        11,
+        22
+      ],
+      "outputOpaqueBounds": [
+        58,
+        36,
+        185,
+        180
+      ],
+      "opaquePixelsClipped": 0
+    },
+    {
+      "phase": 8,
+      "sourceRect": [
+        1330,
+        444,
+        1774,
+        887
+      ],
+      "sourceFootAnchor": [
+        223.5,
+        396
+      ],
+      "targetFootAnchor": [
+        96,
+        180
+      ],
+      "scaledSize": [
+        178,
+        177
+      ],
+      "pasteOffset": [
+        6,
+        22
+      ],
+      "outputOpaqueBounds": [
+        63,
+        37,
+        163,
+        180
+      ],
+      "opaquePixelsClipped": 0
+    }
+  ],
+  "limitations": [
+    "AI-drawn pose proportions, head direction and club apparent length vary modestly between frames.",
+    "This conceptual key-pose animation is not golf coaching, motion capture or a biomechanically validated swing.",
+    "The repeat boundary is a deliberate reset from finish to address, not a seamless loop."
+  ],
+  "originalPublication": {
+    "status": "pending",
+    "includedInThisRelease": false,
+    "note": "Original filename and hash identify the creation-stage source; use the published prepared input for reproducible engine extraction. Source-preparation reproduction awaits original publication."
+  }
+}

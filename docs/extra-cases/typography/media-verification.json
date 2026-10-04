@@ -1,0 +1,110 @@
+{
+  "scope": "Decoded delivery MP4, not only pre-encode PNGs",
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 720,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "24/1",
+        "nb_read_frames": "240"
+      }
+    ],
+    "format": {
+      "duration": "10.000000",
+      "size": "187708"
+    }
+  },
+  "fullDecodePassed": true,
+  "frameOrderChecks": [
+    {
+      "videoFrame": 48,
+      "sourceFrame": 1,
+      "meanAbsoluteRgbError": 1.4
+    },
+    {
+      "videoFrame": 57,
+      "sourceFrame": 4,
+      "meanAbsoluteRgbError": 1.6847
+    },
+    {
+      "videoFrame": 66,
+      "sourceFrame": 7,
+      "meanAbsoluteRgbError": 1.7753
+    },
+    {
+      "videoFrame": 75,
+      "sourceFrame": 10,
+      "meanAbsoluteRgbError": 1.8174
+    },
+    {
+      "videoFrame": 84,
+      "sourceFrame": 13,
+      "meanAbsoluteRgbError": 1.8214
+    },
+    {
+      "videoFrame": 90,
+      "sourceFrame": 15,
+      "meanAbsoluteRgbError": 1.8178
+    },
+    {
+      "videoFrame": 114,
+      "sourceFrame": 7,
+      "meanAbsoluteRgbError": 1.7742
+    },
+    {
+      "videoFrame": 144,
+      "sourceFrame": 1,
+      "meanAbsoluteRgbError": 1.4146
+    },
+    {
+      "videoFrame": 168,
+      "sourceFrame": 9,
+      "meanAbsoluteRgbError": 1.7879
+    }
+  ],
+  "reviewImages": [
+    ".build/decoded-review.png",
+    ".build/mobile-review.png"
+  ],
+  "notes": [
+    "240 video frames fully decoded",
+    "Source animation: 8 FPS. Video: 24 FPS, each animation frame repeats 3 times.",
+    "Actual engine PNGs are externally composited; MP4 does not preserve alpha.",
+    "No audio; Korean captions are burned in and also supplied as SRT."
+  ],
+  "images": {
+    "typography-source.png": {
+      "width": 960,
+      "height": 512,
+      "mode": "RGBA",
+      "bytes": 66820,
+      "sha256": "d665cd5aa05feeed7b2cce2a2344c9de1e31d28dfb5c4c3ef8c580ec34cd4dfa"
+    },
+    "typography-atlas.png": {
+      "width": 960,
+      "height": 512,
+      "mode": "RGBA",
+      "bytes": 55755,
+      "sha256": "d4a47f48b4cfe72db7ea0a0339f9dcdcb513cb6e18986b793b9aa244e8584dab"
+    },
+    "typography-comparison.png": {
+      "width": 1200,
+      "height": 840,
+      "mode": "RGB",
+      "bytes": 107972,
+      "sha256": "1138e2730d9ae7d7c1ae22be9b8eac492d61391bdacc8f5b1de2295fde7d406a"
+    },
+    "typography-poster.png": {
+      "width": 720,
+      "height": 720,
+      "mode": "RGB",
+      "bytes": 78355,
+      "sha256": "f2ebdcdac7d4893409671b627c91102b60c7d6f32d0a03dbb6f5c2d1fc6150ed"
+    }
+  }
+}

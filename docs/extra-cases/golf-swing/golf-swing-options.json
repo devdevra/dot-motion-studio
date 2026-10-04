@@ -1,0 +1,21 @@
+{
+  "name": "golf-swing",
+  "fps": 2,
+  "source": {
+    "kind": "grid",
+    "columns": 4,
+    "rows": 2,
+    "count": 8,
+    "margin": 0,
+    "spacing": 0
+  },
+  "alphaThreshold": 0,
+  "normalize": {
+    "trim": false,
+    "padding": 0,
+    "width": 192,
+    "height": 192,
+    "align": "center"
+  },
+  "atlasColumns": 4
+}
