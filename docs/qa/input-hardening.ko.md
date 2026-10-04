@@ -2,7 +2,7 @@
 
 2026-10-04 · Dot Motion Studio
 
-이 문서는 기존 v5 기능 점검 이후 발견한 세 가지 입력 검증 문제의 수정 내용과 한계를 기록합니다. **이 강화 소스는 사용자 승인 후 2026-10-04(UTC)에 기존 [공개 Site](https://dot-motion-studio.jakeshin.chatgpt.site)의 v6로 운영 배포되었으며, 배포 성공을 확인했습니다.** 공개 범위·로그인 보호·기존 MCP capability와 플러그인 식별자는 유지했습니다. 실제 사용자 로그인·브라우저 다운로드·MCP 연결 및 운영 메모리 한도는 계속 별도 확인이 필요합니다.
+이 문서는 기존 v5 기능 점검 이후 발견한 세 가지 입력 검증 문제의 수정 내용과 한계를 기록합니다. **이 강화 소스는 사용자 승인 후 2026-10-04(UTC)에 기존 [공개 Site](https://dot-motion-studio.jakeshin.chatgpt.site)의 v6로 운영 배포되었으며, 배포 성공을 확인했습니다.** 공개 범위·로그인 보호·기존 MCP capability와 플러그인 식별자는 유지했습니다. 이후 인증된 MCP 연결과 세 도구의 실제 호출도 확인했습니다([라이브 MCP 검사](#live-mcp-check)). Site 웹 UI의 실제 사용자 로그인·업로드·브라우저 다운로드와 운영 메모리 한도는 계속 별도 확인이 필요합니다.
 
 ## 수정 내용
 
@@ -56,6 +56,23 @@ PNG 입력 압축 해제만 정확한 버전으로 고정한 **pako 3.0.2**로 �
 
 [소스 커밋 `23c47cc`](https://github.com/devdevra/dot-motion-studio/commit/23c47cc059bbf45e442b1399e6d2b630a0d507ac)의 [GitHub Actions 실행](https://github.com/devdevra/dot-motion-studio/actions/runs/37198993707)은 설치·저장소 테스트·PNG 코퍼스·타입 검사·빌드·로컬 Worker 검사를 모두 통과했습니다. `npm run lint`는 별도 실행 시 기존 UI의 Next Link 규칙 오류 2개와 경고가 남아 있습니다. 이번 변경 때문에 새로 생긴 진단은 아니며, CI의 필수 검사에는 포함하지 않았습니다.
 
+<a id="live-mcp-check"></a>
+## 라이브 MCP 인증 연결과 출력 일치 확인
+
+2026-10-04 **12:36–12:38 UTC**, 공식 ChatGPT 화면에서 사용자가 확인한 계정의 기존 Dot Motion Studio 플러그인이 설치·연결되어 있고 세 도구가 노출됨을 확인한 뒤, 실제 연결을 통해 `motion_capabilities`, `inspect_png`, `build_sprite`를 호출했습니다.
+
+- `motion_capabilities`: 기능 안내 호출 성공
+- `inspect_png`: 기존 [골프공 입력](../demo/golf-ball-input.png), 96×96 RGBA, 9,216픽셀, 알파 경계 크기 74×75 확인
+- `build_sprite`: 기존 [골프공 옵션](../demo/golf-ball-options.json)과 `includeSequenceZip:true` 사용; 16프레임, 프레임당 276×96, 1104×384 아틀라스, FPS 12 확인
+- 아틀라스 PNG: **58,153바이트**, SHA-256 `b41576e7893087923bbac1518b2c3b12a71d939ae7fa7c3ceec0aae8fb600cc2`
+- 프레임 ZIP: **206,466바이트**, SHA-256 `7c1429f2e0d1beecee81c3ea131b43ff0aefd3dff44ad8baa06cc7485feccd13`
+- ZIP: **17개 항목**, 전체 CRC 무결성 검사 통과 (`testzip()` 반환값 `None`)
+- 반환된 아틀라스 PNG·JSON·ZIP은 이미 공개된 [아틀라스](../demo/golf-ball-atlas.png), [JSON](../demo/golf-ball-atlas.json), [ZIP](../demo/golf-ball-frames.zip)과 바이트 단위로 일치했습니다.
+
+이전에 플러그인 업데이트 오류가 있었고 당시에는 연결 성공을 확인하지 못했습니다. 이후 같은 기존 플러그인의 설치·연결과 인증된 처리를 위 범위에서 확인했습니다. 이전 오류의 근본 원인이나 모든 계정의 설치·업데이트 문제가 해결되었다는 뜻은 아닙니다.
+
+이 확인은 기존 v6와 기존 공개 데모 입력을 사용한 연결·출력 검사입니다. 소스·배포·플러그인 식별자를 변경하지 않았으며 중복 결과 파일을 추가하지 않았습니다. **Site 웹 UI 로그인 후 업로드 → 검사 → 처리 → 브라우저 다운로드 전체 흐름은 아직 확인하지 않았습니다.** Android 설치·업데이트와 운영 부하·동시성·메모리 한도도 검증하지 않았습니다.
+
 ## 재현
 
 ```bash
@@ -79,6 +96,6 @@ node scripts/qa/adversarial-png.mjs lib/motion-engine.mjs audit-results.json
 
 - **드문 동적 DEFLATE 헤더:** 사용되지 않는 예약 거리 코드가 포함된 HDIST=31/32 합성 사례는 이전 디코더가 받아들였지만 Pako·Node zlib·Python zlib·Pillow는 거절합니다. RFC1951이 기술한 거리 코드 수의 전체 범위와 참조 구현의 동작 차이가 있는 호환성 제한입니다. 정상 생성 코퍼스나 기존 258조건에는 이 패턴이 없었고 실제 사용자 파일의 빈도는 측정하지 않았습니다. 안전하지 않은 느슨한 디코더로 되돌리는 보완 경로는 두지 않았습니다. 이런 입력은 일반 이미지 편집기에서 정적 PNG로 다시 내보내는 방법이 필요할 수 있습니다.
 - 모든 PNG·RFC 입력에 대한 완전한 적합성이나 보안 무결점 보증이 아닙니다. 기존 비인터레이스 PNG·색 형식·비트 깊이 지원 범위는 유지합니다.
-- 로컬 테스트의 성공이 실제 사용자의 로그인, 운영 브라우저 다운로드, Android 설치·업데이트, 라이브 MCP 인증 연결 성공을 뜻하지 않습니다. 기존 플러그인 업데이트 문제는 해결이 확인되지 않았습니다.
+- 로컬 테스트와 별도로 [라이브 MCP 검사](#live-mcp-check)에서 기존 플러그인의 인증 연결과 세 도구의 실제 호출을 확인했습니다. Site 웹 UI의 로그인·업로드·브라우저 다운로드 전체 흐름, Android 설치·업데이트는 아직 확인하지 않았습니다. 이전 플러그인 업데이트 오류의 근본 원인이나 모든 계정에 대한 해결은 확인하지 않았습니다.
 - production 부하 테스트나 동시성·메모리 한도 검증은 수행하지 않았습니다. 출력 콜백의 조기 중단과 요청별 제한을 직접 확인한 범위만 보고합니다.
 - 이 수정은 세 입력 검증 문제를 해결하기 위한 것이며, 코드 실행·데이터 노출·인증 우회가 가능했다는 보안 취약점 주장은 하지 않습니다.
