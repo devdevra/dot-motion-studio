@@ -24,4 +24,15 @@ await test('Authenticated inspection measures actual transparent pixels',async()
 await test('Authenticated build returns PNG + metadata + requested ZIP',async()=>{const r=await handleMCP(request('tools/call',{name:'build_sprite',arguments:{pngBase64:b64,options:{source:{kind:'single'},motion:{frames:3,dx:2,dy:-1},fps:12},includeSequenceZip:true}},true));const body=await r.json();assert.equal(body.result.isError,undefined);assert.equal(body.result.content.length,3);const summary=JSON.parse(body.result.content[0].text).summary;assert.equal(summary.frameCount,3);const atlas=decodePNG(new Uint8Array(Buffer.from(body.result.content[1].data,'base64')));assert.equal(atlas.width,summary.atlasWidth);assert.equal(body.result.content[2].resource.mimeType,'application/zip');});
 await test('Service rejects remote URLs, bad filenames as schema or safe sanitization, invalid types and overlarge bodies',async()=>{assert.throws(()=>inspectInput({pngBase64:'https://example.com/image.png'}));assert.throws(()=>inspectInput({pngBase64:'A'.repeat(2666672)}));assert.throws(()=>processInput({pngBase64:b64,options:{url:'http://internal'}}));assert.throws(()=>processInput({pngBase64:b64,options:{motion:{frames:65,dx:1,dy:0}}}));const response=await handleMCP(request('tools/call',{name:'build_sprite',arguments:{pngBase64:b64,path:'../../secret'}},true));assert.equal((await response.json()).error.code,-32602);const huge=new Request('https://studio.example/api/process',{method:'POST',headers:{'Content-Type':'application/json','Content-Length':'3000001'},body:'{}'});await assert.rejects(()=>readJSON(huge));});
 await test('RPC unknown methods, invalid JSON and initialized notifications are bounded',async()=>{assert.equal((await (await handleMCP(request('unknown'))).json()).error.code,-32601);assert.equal((await handleMCP(request('notifications/initialized'))).status,202);const r=await handleMCP(new Request('https://studio.example/mcp',{method:'POST',headers:{'Content-Type':'application/json'},body:'{'}));assert.equal(r.status,400);});
+await test('MCP validates includeSequenceZip type while preserving omitted, false, and true behavior',async()=>{
+  for(const value of ['yes','true',1,0,null,{},[]]){
+    const r=await (await handleMCP(request('tools/call',{name:'build_sprite',arguments:{pngBase64:b64,includeSequenceZip:value}},true))).json();
+    assert.equal(r.error.code,-32602);assert.equal(r.error.message,'includeSequenceZip must be a boolean.');
+  }
+  for(const value of [undefined,false,true]){
+    const args={pngBase64:b64,...(value===undefined?{}:{includeSequenceZip:value})};
+    const r=await (await handleMCP(request('tools/call',{name:'build_sprite',arguments:args},true))).json();
+    assert.equal(r.result.isError,undefined);assert.equal(r.result.content.length,value===true?3:2);
+  }
+});
 await rm(temp,{recursive:true,force:true});

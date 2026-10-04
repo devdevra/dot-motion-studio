@@ -33,6 +33,7 @@ export async function handleMCP(request:Request){
    const permitted=name==='inspect_png'?['pngBase64']:['pngBase64','options','includeSequenceZip'];
    if(Object.keys(args).some(k=>!permitted.includes(k)))return rpcError(id,-32602,'Unsupported argument.');
    if(name==='inspect_png')return response(id,textResult(inspectInput(args)));
+   if(args.includeSequenceZip!==undefined && typeof args.includeSequenceZip!=='boolean')return rpcError(id,-32602,'includeSequenceZip must be a boolean.');
    const result=processInput(args,args.includeSequenceZip===true);
    const content:Record<string,unknown>[]=[{type:'text',text:JSON.stringify({summary:result.summary,metadata:result.metadata,inspection:result.inspection})},{type:'image',mimeType:'image/png',data:result.atlasBase64}];
    if(args.includeSequenceZip===true)content.push({type:'resource',resource:{uri:'motion://exports/sprite-frames.zip',mimeType:'application/zip',blob:result.sequenceZipBase64}});
