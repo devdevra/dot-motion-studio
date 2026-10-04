@@ -38,8 +38,8 @@
       "duration": "24.010000",
       "size": "1519271"
     },
-    "published": false,
-    "publication_status": "Generated and verified locally; not published in this repository"
+    "published": true,
+    "publication_status": "Included in this repository release; original verified bytes preserved"
   },
   "notes": [
     "Silent explanatory video, not an app screen recording",

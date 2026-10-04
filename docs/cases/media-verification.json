@@ -19,8 +19,8 @@
       "duration": "36.000000",
       "size": "1614468"
     },
-    "published": false,
-    "publicationNote": "Creation-stage verification only; excluded from this partial public release."
+    "published": true,
+    "publicationNote": "Included in this repository release; original verified bytes preserved."
   },
   "dot-motion-cases-quick-look.gif": {
     "sha256": "c45edfaadb741a1e6f38608beed9f60b979f9ab5d2c74731fb2c0498607b7d65",

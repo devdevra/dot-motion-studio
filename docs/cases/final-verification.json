@@ -1,7 +1,6 @@
 {
   "verificationScope": "published-only",
   "skippedUnpublishedFiles": [
-    "dot-motion-cases-ko.mp4",
     "dot-motion-cases-quick-look.gif",
     "inputs/mascot-expression-contact.jpg",
     "inputs/originals/flag-wave-ai-source.png",
@@ -119,9 +118,35 @@
         "passed": true
       },
       "mainVideoTimelineSample": {
-        "skipped": true,
-        "reason": "Not included in this partial public release",
-        "decodedVideoFramesChecked": 0
+        "decodedVideoFramesChecked": 24,
+        "sourcePoseIndicesMatched": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          6,
+          6,
+          6,
+          7,
+          7,
+          7,
+          8,
+          8,
+          8
+        ],
+        "maxMeanAbsoluteRgbError": 3.0382,
+        "passed": true
       }
     },
     {
@@ -232,9 +257,35 @@
         "passed": true
       },
       "mainVideoTimelineSample": {
-        "skipped": true,
-        "reason": "Not included in this partial public release",
-        "decodedVideoFramesChecked": 0
+        "decodedVideoFramesChecked": 24,
+        "sourcePoseIndicesMatched": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          6,
+          6,
+          6,
+          7,
+          7,
+          7,
+          8,
+          8,
+          8
+        ],
+        "maxMeanAbsoluteRgbError": 2.3207,
+        "passed": true
       }
     },
     {
@@ -345,13 +396,39 @@
         "passed": true
       },
       "mainVideoTimelineSample": {
-        "skipped": true,
-        "reason": "Not included in this partial public release",
-        "decodedVideoFramesChecked": 0
+        "decodedVideoFramesChecked": 24,
+        "sourcePoseIndicesMatched": [
+          1,
+          1,
+          2,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          6,
+          6,
+          7,
+          7,
+          8,
+          8,
+          1,
+          1,
+          2,
+          2,
+          3,
+          3,
+          4,
+          4
+        ],
+        "maxMeanAbsoluteRgbError": 1.9201,
+        "passed": true
       }
     }
   ],
   "allMediaFullDecode": "passed for included media only",
-  "localMarkdownLinks": 24,
-  "manualVisualReview": "Creation-stage record: 12 main-video sample images and the 24-frame contact sheet were reviewed. This partial-package check verifies the three individual previews; it does not recheck excluded main-video samples. Robot gait and uneven cloth increments remain disclosed."
+  "localMarkdownLinks": 25,
+  "manualVisualReview": "Creation-stage record: 12 main-video sample images and the 24-frame contact sheet were reviewed. This verifier compares all 288 individual-preview frames plus 72 main-video sample frames (24 per case); it does not pose-compare all 864 main-video frames. All included videos are fully decoded. Robot gait and uneven cloth increments remain disclosed."
 }

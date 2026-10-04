@@ -10,7 +10,7 @@ parser.add_argument('--published-only',action='store_true',help='Verify the part
 args=parser.parse_args()
 # Stable release scope, including after a local renderer rewrites media metadata.
 PUBLISHED_OMISSIONS=frozenset([
- 'dot-motion-cases-ko.mp4','dot-motion-cases-quick-look.gif',
+ 'dot-motion-cases-quick-look.gif',
  'inputs/originals/robot-walk-ai-source.png','inputs/originals/mascot-expression-ai-source.png','inputs/originals/flag-wave-ai-source.png',
  'inputs/robot-walk-contact.jpg','inputs/mascot-expression-contact.jpg',
 ])
@@ -78,7 +78,7 @@ for ci,c in enumerate(proof['cases']):
             frames.append(frame)
     results.append({'case':c['id'],'sourceOrderAndAlpha':True,'zipAndAtlasMatch':True,
         'individualPreviewTimeline':verify_timeline(root/f"{c['id']}-preview.mp4",frames,320,32,65,96,c['fps']),
-        'mainVideoTimelineSample':({'skipped':True,'reason':'Not included in this partial public release','decodedVideoFramesChecked':0} if args.published_only else verify_timeline(ROOT/'dot-motion-cases-ko.mp4',frames,224,808,250,24,c['fps'],3+ci*9))})
+        'mainVideoTimelineSample':verify_timeline(ROOT/'dot-motion-cases-ko.mp4',frames,224,808,250,24,c['fps'],3+ci*9)})
 for path,m in media.items():
     if path in ('notes','tools'):continue
     if args.published_only and path in PUBLISHED_OMISSIONS:
@@ -96,7 +96,7 @@ for p in ROOT.glob('*.md'):
             assert (p.parent/target.split('#')[0]).exists(),(p,target)
             links.append({'document':p.name,'target':target})
 report={'verificationScope':'published-only' if args.published_only else 'full local package','skippedUnpublishedFiles':sorted(set(skipped)),'engineUnchanged':True,'caseChecks':results,'allMediaFullDecode':'passed for included media only' if args.published_only else 'passed','localMarkdownLinks':len(links),
-    'manualVisualReview':'Creation-stage record: 12 main-video sample images and the 24-frame contact sheet were reviewed. This partial-package check verifies the three individual previews; it does not recheck excluded main-video samples. Robot gait and uneven cloth increments remain disclosed.'}
+    'manualVisualReview':'Creation-stage record: 12 main-video sample images and the 24-frame contact sheet were reviewed. This verifier compares all 288 individual-preview frames plus 72 main-video sample frames (24 per case); it does not pose-compare all 864 main-video frames. All included videos are fully decoded. Robot gait and uneven cloth increments remain disclosed.'}
 (ROOT/'final-verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 files=sorted(p for p in ROOT.rglob('*') if p.is_file() and not any(q in ('.build','__pycache__') for q in p.relative_to(ROOT).parts) and p.name!='SHA256SUMS.txt' and (not args.published_only or str(p.relative_to(ROOT)) not in skipped))
 (ROOT/'SHA256SUMS.txt').write_text(''.join(f'{sha(p)}  {p.relative_to(ROOT)}\n' for p in files))
