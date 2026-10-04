@@ -687,6 +687,8 @@ npm run dev
 | `npm run install:ci` | Sites 실행 환경을 고려하는 설치 래퍼 |
 | `npm run dev` | 개발 서버 |
 | `npm test` | Node 내장 테스트 러너로 `tests/*.test.mjs` 실행 |
+| `npm run test:png` | 독립 zlib 기준의 PNG 정상·변조·절단 입력 2,034조건 검사 |
+| `npm run test:worker` | 빌드한 Worker의 로컬 API·MCP·오류·한도 검사 (`npm run build` 후 실행) |
 | `npm run typecheck` | TypeScript 타입 검사 |
 | `npm run build` | Cloudflare Workers 호환 빌드 |
 | `npm start` | 이미 빌드한 Worker를 로컬 Wrangler로 실행 |
@@ -715,7 +717,7 @@ build/                      Sites/Vite/Worker 통합
 .github/workflows/ci.yml     push·PR 검증
 ```
 
-엔진은 네트워크·파일시스템·DOM·Node API에 의존하지 않는 픽셀 처리 모듈입니다. 압축·해제와 ZIP 기본 연산에 `fflate`를 사용합니다. Node로 엔진을 직접 import할 때는 [`lib/motion-engine.mjs`](lib/motion-engine.mjs)의 함수 계약을 확인하세요. **엔진 내부 허용 범위와 공개 MCP 스키마는 완전히 동일하지 않으므로, MCP 클라이언트는 7절의 공개 계약을 따라야 합니다.**
+엔진은 네트워크·파일시스템·DOM·Node API에 의존하지 않는 픽셀 처리 모듈입니다. PNG 입력의 zlib/DEFLATE 검증에는 정확한 버전으로 고정한 `pako 3.0.2`의 공개 스트리밍 API를 사용하고, PNG·ZIP 출력에는 기존 `fflate`를 사용합니다. Node로 엔진을 직접 import할 때는 [`lib/motion-engine.mjs`](lib/motion-engine.mjs)의 함수 계약을 확인하세요. **엔진 내부 허용 범위와 공개 MCP 스키마는 완전히 동일하지 않으므로, MCP 클라이언트는 7절의 공개 계약을 따라야 합니다.**
 
 ### 10.3 테스트 범위
 
@@ -731,7 +733,7 @@ build/                      Sites/Vite/Worker 통합
 - MCP 초기화·발견·프로토콜 버전·인증·오류·PNG/ZIP 응답
 - 뒤늦게 끝난 이전 업로드·검사 요청이 새 결과를 덮어쓰지 않는지
 
-[`CI`](https://github.com/devdevra/dot-motion-studio/actions)는 push와 pull request에 대해 `npm ci`, `npm test`, `npm run typecheck`, `npm run build`를 실행합니다. 로컬·CI 통과와 실제 사용자 계정의 MCP 연결 성공은 각각 확인해야 합니다.
+[`CI`](https://github.com/devdevra/dot-motion-studio/actions)는 push와 pull request에 대해 `npm ci`, `npm test`, `npm run test:png`, `npm run typecheck`, `npm run build`, `npm run test:worker`를 실행합니다. 로컬·CI 통과와 실제 사용자 계정의 MCP 연결 성공은 각각 확인해야 합니다.
 
 ### 10.3.1 2026-10-04 기능 점검과 수정 소스
 
@@ -744,6 +746,22 @@ build/                      Sites/Vite/Worker 통합
 - **아직 확인하지 못한 부분:** 실제 소유자 로그인 후 운영 환경의 업로드 → 검사 → 처리 → 브라우저 다운로드 전체 과정, 실제 MCP 플러그인 연결·인증, Android의 플러그인 설치·업데이트
 
 두 수정은 기존 [공개 Site](https://dot-motion-studio.jakeshin.chatgpt.site)의 v5에 배포되었습니다. 공개 범위·로그인 보호·기존 플러그인 식별자는 유지했습니다. Site 배포 성공과 실제 사용자 계정의 인증 처리·다운로드·MCP 연결 성공은 별도로 확인해야 합니다.
+
+### 10.3.2 2026-10-04 입력 검증 강화 소스
+
+추가 점검에서 발견한 세 가지 낮은 심각도의 입력 검증 문제를 수정했습니다.
+
+- **명시적인 `null` 거절:** 필드를 생략했을 때만 기본값을 적용합니다. `fps:null`, `normalize.trim:null`, `source:null` 같은 값은 오류이며, MCP의 `arguments:null`과 웹 API의 `null` 본문도 의도된 오류로 처리합니다.
+- **실제 압축 스트림 끝의 체크섬 검증:** IDAT의 마지막 4바이트를 체크섬으로 가정하지 않습니다. 정상 zlib 스트림 뒤에 남은 바이트는 PNG 규격의 안내대로 무시하지만, 잘못된 체크섬 뒤에 정상 체크섬을 붙인 입력은 거절합니다.
+- **DEFLATE 길이 검증:** 저장 블록의 LEN/NLEN 불일치, 잘린 스트림, 잘못된 헤더·거리·허프만 구조를 엄격한 디코더로 검사합니다.
+
+기존 이미지·프레임·입출력 크기 제한은 유지합니다. 압축 입력은 1KiB씩 공급하고, 출력은 최대 16KiB의 작은 묶음마다 IHDR 크기와 비교하여 초과 즉시 중단합니다. 정상 입력의 PNG·JSON·ZIP 바이트는 기존 결과와 비교했습니다. 새 라이브러리는 입력 디코딩에만 사용하므로 출력 압축기는 바꾸지 않았습니다.
+
+**이 강화 소스의 운영 배포는 별도 승인 대기 중입니다. 현재 공개 Site에는 앞 절의 v5가 실행 중입니다.** GitHub 소스·검사 통과가 실제 Site 적용이나 MCP 연결 성공을 뜻하지 않습니다.
+
+최종 로컬 검사에서 저장소 테스트 **111/111**, 별도 PNG 코퍼스 **2,034/2,034**, 빌드한 로컬 Worker 검사 **24/24**, 타입 검사와 빌드가 통과했습니다. 각 묶음은 범위가 겹치므로 합산하지 않습니다.
+
+검사 결과·재현 명령·드문 PNG 호환성 제한은 [입력 검증 강화 QA 기록](docs/qa/input-hardening.ko.md)을 참고하세요. 실제 사용자 인증 업로드·다운로드, MCP 연결 및 운영 Worker 메모리 한도는 계속 별도 확인이 필요합니다.
 
 ### 10.4 배포 원칙
 
@@ -786,3 +804,4 @@ Dot Motion Studio의 모션 엔진과 애플리케이션 코드는 독립적으�
 - npm 의존성과 Sites starter 구성요소에는 각 원저작자의 라이선스가 적용됩니다.
 - 주요 제3자 구성요소와 연구 참고 출처는 [`THIRD_PARTY.md`](THIRD_PARTY.md)에, 정확한 의존성 버전은 [`package-lock.json`](package-lock.json)에 있습니다.
 - 사용자가 제공한 이미지의 권리는 원권리자에게 있습니다.
+

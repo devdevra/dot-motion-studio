@@ -27,8 +27,12 @@ export function fromBase64(value: unknown) {
   const bytes=new Uint8Array(raw.length); for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i); return bytes;
 }
 export function toBase64(bytes: Uint8Array) { let out=''; for(let i=0;i<bytes.length;i+=16384) out+=String.fromCharCode(...bytes.subarray(i,i+16384)); return btoa(out); }
-export function inspectInput(body: {pngBase64?: unknown}) { const bytes=fromBase64(body.pngBase64); return {...inspectPNG(bytes), ...inspectImage(decodePNG(bytes))}; }
-export function processInput(body: {pngBase64?:unknown; options?:unknown}, includeSequence = true) {
+function inputObject(body: unknown): asserts body is {pngBase64?: unknown; options?: unknown} {
+  if(!body || typeof body !== 'object' || Array.isArray(body)) throw new RequestError('Input must be an object.');
+}
+export function inspectInput(body: unknown) { inputObject(body); const bytes=fromBase64(body.pngBase64); return {...inspectPNG(bytes), ...inspectImage(decodePNG(bytes))}; }
+export function processInput(body: unknown, includeSequence = true) {
+  inputObject(body);
   if(body.options !== undefined && (!body.options || typeof body.options !== 'object' || Array.isArray(body.options))) throw new RequestError('Options must be an object.');
   const r = runPipeline(fromBase64(body.pngBase64),body.options ?? {}, includeSequence);
   if(r.atlasPng.length + r.sequenceZip.length > 3_000_000) throw new RequestError('Export is too large. Reduce frames or canvas dimensions.',413);

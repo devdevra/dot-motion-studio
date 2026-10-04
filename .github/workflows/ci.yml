@@ -16,5 +16,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
+      - run: npm run test:png
       - run: npm run typecheck
       - run: npm run build
+      - run: npm run test:worker

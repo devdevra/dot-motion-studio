@@ -25,7 +25,7 @@ export async function handleMCP(request:Request){
  if(rpc.method==='prompts/list')return response(id,{prompts:[]});
  if(rpc.method!=='tools/call')return rpcError(id,-32601,'Method not found.');
  try {
-   const name=rpc.params?.name; const args=rpc.params?.arguments??{};
+   const name=rpc.params?.name; const args=rpc.params?.arguments===undefined?{}:rpc.params.arguments;
    if(!args || typeof args!=='object' || Array.isArray(args))return rpcError(id,-32602,'Arguments must be an object.');
    if(name==='motion_capabilities')return response(id,textResult(capabilities));
    if(!['inspect_png','build_sprite'].includes(name??''))return rpcError(id,-32602,'Unknown tool.');
