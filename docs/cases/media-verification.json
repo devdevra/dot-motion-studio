@@ -1,0 +1,123 @@
+{
+  "dot-motion-cases-ko.mp4": {
+    "sha256": "caa187d199b763e70ca055909c1d30aa19f9efd2a16be0896e7270f5ce67a5a1",
+    "fullDecode": "passed",
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "24/1",
+        "nb_frames": "864"
+      }
+    ],
+    "format": {
+      "duration": "36.000000",
+      "size": "1614468"
+    },
+    "published": false,
+    "publicationNote": "Creation-stage verification only; excluded from this partial public release."
+  },
+  "dot-motion-cases-quick-look.gif": {
+    "sha256": "c45edfaadb741a1e6f38608beed9f60b979f9ab5d2c74731fb2c0498607b7d65",
+    "fullDecode": "passed",
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "gif",
+        "codec_type": "video",
+        "width": 768,
+        "height": 256,
+        "pix_fmt": "bgra",
+        "r_frame_rate": "12/1",
+        "nb_frames": "24"
+      }
+    ],
+    "format": {
+      "duration": "2.000000",
+      "size": "658897"
+    },
+    "published": false,
+    "publicationNote": "Creation-stage verification only; excluded from this partial public release."
+  },
+  "outputs/robot-walk/robot-walk-preview.mp4": {
+    "sha256": "235bb197f7a6a0f294f7d99d481cca545ac5d57d4e59342834475bc96dd4cc1b",
+    "fullDecode": "passed",
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 384,
+        "height": 448,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "24/1",
+        "nb_frames": "96"
+      }
+    ],
+    "format": {
+      "duration": "4.000000",
+      "size": "154171"
+    }
+  },
+  "outputs/mascot-expression/mascot-expression-preview.mp4": {
+    "sha256": "b756746fa90fb3e3deedaacff9257c52042f35e973f919d64e7e60175968c38c",
+    "fullDecode": "passed",
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 384,
+        "height": 448,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "24/1",
+        "nb_frames": "96"
+      }
+    ],
+    "format": {
+      "duration": "4.000000",
+      "size": "62285"
+    }
+  },
+  "outputs/flag-wave/flag-wave-preview.mp4": {
+    "sha256": "501956206c92279f7a21f5d36f2bb67f1e187cb66dcd486cb8bd7fb22dd03ab2",
+    "fullDecode": "passed",
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 384,
+        "height": 448,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "24/1",
+        "nb_frames": "96"
+      }
+    ],
+    "format": {
+      "duration": "4.000000",
+      "size": "77825"
+    }
+  },
+  "notes": [
+    "All animation frames are decoded PNG sequence output from unchanged production engine.",
+    "AI source sheets supplied pre-drawn poses; no pose generation or interpolation performed by engine.",
+    "Canvas anchors preserved exactly; AI source temporal consistency is not guaranteed.",
+    "MP4/GIF use separate FFmpeg composition; no alpha in MP4; checkerboard is a viewing aid.",
+    "Silent Korean explanatory composition, not a screen recording or live MCP execution.",
+    "Representative decoded MP4 frames sampled at 12 timestamps under .build/."
+  ],
+  "tools": {
+    "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+    "pillow": "12.3.0"
+  }
+}

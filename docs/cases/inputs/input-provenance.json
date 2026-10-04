@@ -1,0 +1,959 @@
+{
+  "createdAt": "2026-10-04",
+  "purpose": "Original AI-drawn pose and expression inputs for real Dot Motion frame extraction demos. The engine does not generate these poses.",
+  "generationPrompts": "generation-prompts.json",
+  "preparationScript": "prepare_inputs.py",
+  "cases": [
+    {
+      "id": "robot-walk",
+      "engineInput": "robot-walk.png",
+      "originalAiSheet": "originals/robot-walk-ai-source.png",
+      "generationTool": "built-in image_gen.imagegen",
+      "sourceToolFile": "exec-dc501fab-a7a1-477c-9f5a-c6ac3b35eac8.png",
+      "promptKey": "robot_walk",
+      "originalDimensions": [
+        1774,
+        887
+      ],
+      "width": 512,
+      "height": 256,
+      "mode": "RGBA",
+      "grid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "frameCount": 8,
+      "frameOrder": "row-major, left-to-right then top-to-bottom",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "recommendedFps": 8,
+      "bytes": 123959,
+      "sha256": "d2597854885338bc451a8e700d262857c33f4e7fc79ad2af910778ef68aa1afa",
+      "nonInterlaced": true,
+      "animatedPng": false,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "preparation": {
+        "commonScale": 0.27,
+        "filter": "Pillow LANCZOS",
+        "operations": [
+          "Equal-cell grid crop using rounded source boundaries",
+          "Uniform scale per case",
+          "Rigid per-frame anchor placement onto 128x128 transparent canvas",
+          "Row-major 4x2 atlas assembly; RGBA non-interlaced PNG encoding"
+        ],
+        "alphaThresholdApplied": false,
+        "semanticCleanup": false,
+        "repainted": false,
+        "syntheticFrames": false,
+        "placement": [
+          {
+            "frame": 0,
+            "sourceRect": [
+              0,
+              0,
+              444,
+              444
+            ],
+            "sourceAnchor": [
+              222.0,
+              428
+            ],
+            "targetAnchor": [
+              64,
+              118
+            ],
+            "resampledCell": [
+              120,
+              120
+            ],
+            "pasteOffset": [
+              4,
+              2
+            ],
+            "opaqueOutputBounds": [
+              32,
+              9,
+              100,
+              118
+            ]
+          },
+          {
+            "frame": 1,
+            "sourceRect": [
+              444,
+              0,
+              887,
+              444
+            ],
+            "sourceAnchor": [
+              221.5,
+              424
+            ],
+            "targetAnchor": [
+              64,
+              118
+            ],
+            "resampledCell": [
+              120,
+              120
+            ],
+            "pasteOffset": [
+              4,
+              3
+            ],
+            "opaqueOutputBounds": [
+              32,
+              15,
+              97,
+              117
+            ]
+          },
+          {
+            "frame": 2,
+            "sourceRect": [
+              887,
+              0,
+              1330,
+              444
+            ],
+            "sourceAnchor": [
+              221.5,
+              423
+            ],
+            "targetAnchor": [
+              64,
+              118
+            ],
+            "resampledCell": [
+              120,
+              120
+            ],
+            "pasteOffset": [
+              4,
+              4
+            ],
+            "opaqueOutputBounds": [
+              30,
+              12,
+              98,
+              118
+            ]
+          },
+          {
+            "frame": 3,
+            "sourceRect": [
+              1330,
+              0,
+              1774,
+              444
+            ],
+            "sourceAnchor": [
+              222.0,
+              424
+            ],
+            "targetAnchor": [
+              64,
+              118
+            ],
+            "resampledCell": [
+              120,
+              120
+            ],
+            "pasteOffset": [
+              4,
+              3
+            ],
+            "opaqueOutputBounds": [
+              36,
+              7,
+              99,
+              117
+            ]
+          },
+          {
+            "frame": 4,
+            "sourceRect": [
+              0,
+              444,
+              444,
+              887
+            ],
+            "sourceAnchor": [
+              222.0,
+              416
+            ],
+            "targetAnchor": [
+              64,
+              118
+            ],
+            "resampledCell": [
+              120,
+              120
+            ],
+            "pasteOffset": [
+              4,
+              5
+            ],
+            "opaqueOutputBounds": [
+              30,
+              10,
+              100,
+              118
+            ]
+          },
+          {
+            "frame": 5,
+            "sourceRect": [
+              444,
+              444,
+              887,
+              887
+            ],
+            "sourceAnchor": [
+              221.5,
+              416
+            ],
+            "targetAnchor": [
+              64,
+              118
+            ],
+            "resampledCell": [
+              120,
+              120
+            ],
+            "pasteOffset": [
+              4,
+              5
+            ],
+            "opaqueOutputBounds": [
+              32,
+              15,
+              98,
+              118
+            ]
+          },
+          {
+            "frame": 6,
+            "sourceRect": [
+              887,
+              444,
+              1330,
+              887
+            ],
+            "sourceAnchor": [
+              221.5,
+              415
+            ],
+            "targetAnchor": [
+              64,
+              118
+            ],
+            "resampledCell": [
+              120,
+              120
+            ],
+            "pasteOffset": [
+              4,
+              6
+            ],
+            "opaqueOutputBounds": [
+              33,
+              14,
+              98,
+              119
+            ]
+          },
+          {
+            "frame": 7,
+            "sourceRect": [
+              1330,
+              444,
+              1774,
+              887
+            ],
+            "sourceAnchor": [
+              222.0,
+              416
+            ],
+            "targetAnchor": [
+              64,
+              118
+            ],
+            "resampledCell": [
+              120,
+              120
+            ],
+            "pasteOffset": [
+              4,
+              5
+            ],
+            "opaqueOutputBounds": [
+              34,
+              8,
+              99,
+              118
+            ]
+          }
+        ]
+      },
+      "visualQa": [
+        "Eight distinct AI-drawn marching poses; limb swing is stylized and not a biomechanically exact walk cycle.",
+        "Source has small identity/pose variations and a repeat-boundary step; do not label seamless.",
+        "Source row 2 has a slightly higher ground baseline; per-frame rigid placement aligns the opaque foot baseline without changing pose shape."
+      ],
+      "adjacentRgbDifferenceIndicative": [
+        99,
+        82,
+        97,
+        94,
+        87,
+        63,
+        90,
+        70
+      ],
+      "originalSha256": "d9a0505d7e03c63a01e952a8b85aaae691e3a5393a8074a786dcd48b6bb708e4",
+      "originalBytes": 1136363
+    },
+    {
+      "id": "mascot-expression",
+      "engineInput": "mascot-expression.png",
+      "originalAiSheet": "originals/mascot-expression-ai-source.png",
+      "generationTool": "built-in image_gen.imagegen",
+      "sourceToolFile": "exec-541e88f9-27b1-4df3-bf4f-9bed01780365.png",
+      "promptKey": "mascot_expressions",
+      "originalDimensions": [
+        1774,
+        887
+      ],
+      "width": 512,
+      "height": 256,
+      "mode": "RGBA",
+      "grid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "frameCount": 8,
+      "frameOrder": "row-major, left-to-right then top-to-bottom",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "recommendedFps": 8,
+      "bytes": 126682,
+      "sha256": "bdb018fcbecbe5ea04b676fce345bf62a5fe514d3d632afae179e8d01637c77d",
+      "nonInterlaced": true,
+      "animatedPng": false,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "preparation": {
+        "commonScale": 0.27,
+        "filter": "Pillow LANCZOS",
+        "operations": [
+          "Equal-cell grid crop using rounded source boundaries",
+          "Uniform scale per case",
+          "Rigid per-frame anchor placement onto 128x128 transparent canvas",
+          "Row-major 4x2 atlas assembly; RGBA non-interlaced PNG encoding"
+        ],
+        "alphaThresholdApplied": false,
+        "semanticCleanup": false,
+        "repainted": false,
+        "syntheticFrames": false,
+        "placement": [
+          {
+            "frame": 0,
+            "sourceRect": [
+              0,
+              0,
+              444,
+              444
+            ],
+            "sourceAnchor": [
+              222.0,
+              400
+            ],
+            "targetAnchor": [
+              64,
+              118
+            ],
+            "resampledCell": [
+              120,
+              120
+            ],
+            "pasteOffset": [
+              4,
+              10
+            ],
+            "opaqueOutputBounds": [
+              13,
+              30,
+              115,
+              118
+            ]
+          },
+          {
+            "frame": 1,
+            "sourceRect": [
+              444,
+              0,
+              887,
+              444
+            ],
+            "sourceAnchor": [
+              221.5,
+              400
+            ],
+            "targetAnchor": [
+              64,
+              118
+            ],
+            "resampledCell": [
+              120,
+              120
+            ],
+            "pasteOffset": [
+              4,
+              10
+            ],
+            "opaqueOutputBounds": [
+              13,
+              30,
+              115,
+              118
+            ]
+          },
+          {
+            "frame": 2,
+            "sourceRect": [
+              887,
+              0,
+              1330,
+              444
+            ],
+            "sourceAnchor": [
+              221.5,
+              400
+            ],
+            "targetAnchor": [
+              64,
+              118
+            ],
+            "resampledCell": [
+              120,
+              120
+            ],
+            "pasteOffset": [
+              4,
+              10
+            ],
+            "opaqueOutputBounds": [
+              13,
+              30,
+              115,
+              118
+            ]
+          },
+          {
+            "frame": 3,
+            "sourceRect": [
+              1330,
+              0,
+              1774,
+              444
+            ],
+            "sourceAnchor": [
+              222.0,
+              400
+            ],
+            "targetAnchor": [
+              64,
+              118
+            ],
+            "resampledCell": [
+              120,
+              120
+            ],
+            "pasteOffset": [
+              4,
+              10
+            ],
+            "opaqueOutputBounds": [
+              13,
+              30,
+              115,
+              118
+            ]
+          },
+          {
+            "frame": 4,
+            "sourceRect": [
+              0,
+              444,
+              444,
+              887
+            ],
+            "sourceAnchor": [
+              222.0,
+              400
+            ],
+            "targetAnchor": [
+              64,
+              118
+            ],
+            "resampledCell": [
+              120,
+              120
+            ],
+            "pasteOffset": [
+              4,
+              10
+            ],
+            "opaqueOutputBounds": [
+              13,
+              30,
+              115,
+              118
+            ]
+          },
+          {
+            "frame": 5,
+            "sourceRect": [
+              444,
+              444,
+              887,
+              887
+            ],
+            "sourceAnchor": [
+              221.5,
+              400
+            ],
+            "targetAnchor": [
+              64,
+              118
+            ],
+            "resampledCell": [
+              120,
+              120
+            ],
+            "pasteOffset": [
+              4,
+              10
+            ],
+            "opaqueOutputBounds": [
+              13,
+              30,
+              115,
+              118
+            ]
+          },
+          {
+            "frame": 6,
+            "sourceRect": [
+              887,
+              444,
+              1330,
+              887
+            ],
+            "sourceAnchor": [
+              221.5,
+              400
+            ],
+            "targetAnchor": [
+              64,
+              118
+            ],
+            "resampledCell": [
+              120,
+              120
+            ],
+            "pasteOffset": [
+              4,
+              10
+            ],
+            "opaqueOutputBounds": [
+              13,
+              30,
+              115,
+              118
+            ]
+          },
+          {
+            "frame": 7,
+            "sourceRect": [
+              1330,
+              444,
+              1774,
+              887
+            ],
+            "sourceAnchor": [
+              222.0,
+              400
+            ],
+            "targetAnchor": [
+              64,
+              118
+            ],
+            "resampledCell": [
+              120,
+              120
+            ],
+            "pasteOffset": [
+              4,
+              10
+            ],
+            "opaqueOutputBounds": [
+              13,
+              30,
+              115,
+              118
+            ]
+          }
+        ]
+      },
+      "visualQa": [
+        "Sequence: calm, half blink, full blink, reopen, small smile, joyful open smile, joyful closed smile, calm.",
+        "Source silhouette is very consistent; small shading/outline variation remains between AI-drawn frames.",
+        "Frame 8 and frame 1 express calm but are independently generated; not pixel-identical."
+      ],
+      "adjacentRgbDifferenceIndicative": [
+        12,
+        8,
+        13,
+        12,
+        17,
+        13,
+        14,
+        11
+      ],
+      "originalSha256": "93efffbb7c7febaf2d74ac584a1d62ad12690e1009e313ff6e74111051fcec85",
+      "originalBytes": 1182275
+    },
+    {
+      "id": "flag-wave",
+      "engineInput": "flag-wave.png",
+      "originalAiSheet": "originals/flag-wave-ai-source.png",
+      "generationTool": "built-in image_gen.imagegen",
+      "sourceToolFile": "exec-7dc29742-512e-47e1-81f5-4353ef9366a6.png",
+      "promptKey": "flag_wave",
+      "originalDimensions": [
+        1774,
+        887
+      ],
+      "width": 512,
+      "height": 256,
+      "mode": "RGBA",
+      "grid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "frameCount": 8,
+      "frameOrder": "row-major, left-to-right then top-to-bottom",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "recommendedFps": 12,
+      "bytes": 71325,
+      "sha256": "b5ae2f9990828a7bc569bf78f24c0a89baf039abb7212462e5c0b9959b085530",
+      "nonInterlaced": true,
+      "animatedPng": false,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "preparation": {
+        "commonScale": 0.285,
+        "filter": "Pillow LANCZOS",
+        "operations": [
+          "Equal-cell grid crop using rounded source boundaries",
+          "Uniform scale per case",
+          "Rigid per-frame anchor placement onto 128x128 transparent canvas",
+          "Row-major 4x2 atlas assembly; RGBA non-interlaced PNG encoding"
+        ],
+        "alphaThresholdApplied": false,
+        "semanticCleanup": false,
+        "repainted": false,
+        "syntheticFrames": false,
+        "placement": [
+          {
+            "frame": 0,
+            "sourceRect": [
+              0,
+              0,
+              444,
+              444
+            ],
+            "sourceAnchor": [
+              136.0,
+              411
+            ],
+            "targetAnchor": [
+              28,
+              118
+            ],
+            "resampledCell": [
+              127,
+              127
+            ],
+            "pasteOffset": [
+              -11,
+              0
+            ],
+            "opaqueOutputBounds": [
+              24,
+              24,
+              112,
+              118
+            ]
+          },
+          {
+            "frame": 1,
+            "sourceRect": [
+              444,
+              0,
+              887,
+              444
+            ],
+            "sourceAnchor": [
+              118.5,
+              411
+            ],
+            "targetAnchor": [
+              28,
+              118
+            ],
+            "resampledCell": [
+              126,
+              127
+            ],
+            "pasteOffset": [
+              -6,
+              0
+            ],
+            "opaqueOutputBounds": [
+              24,
+              24,
+              114,
+              118
+            ]
+          },
+          {
+            "frame": 2,
+            "sourceRect": [
+              887,
+              0,
+              1330,
+              444
+            ],
+            "sourceAnchor": [
+              101.0,
+              411
+            ],
+            "targetAnchor": [
+              28,
+              118
+            ],
+            "resampledCell": [
+              126,
+              127
+            ],
+            "pasteOffset": [
+              -1,
+              0
+            ],
+            "opaqueOutputBounds": [
+              24,
+              24,
+              113,
+              118
+            ]
+          },
+          {
+            "frame": 3,
+            "sourceRect": [
+              1330,
+              0,
+              1774,
+              444
+            ],
+            "sourceAnchor": [
+              85.0,
+              411
+            ],
+            "targetAnchor": [
+              28,
+              118
+            ],
+            "resampledCell": [
+              127,
+              127
+            ],
+            "pasteOffset": [
+              4,
+              0
+            ],
+            "opaqueOutputBounds": [
+              25,
+              24,
+              114,
+              118
+            ]
+          },
+          {
+            "frame": 4,
+            "sourceRect": [
+              0,
+              444,
+              444,
+              887
+            ],
+            "sourceAnchor": [
+              136.0,
+              376
+            ],
+            "targetAnchor": [
+              28,
+              118
+            ],
+            "resampledCell": [
+              127,
+              126
+            ],
+            "pasteOffset": [
+              -11,
+              11
+            ],
+            "opaqueOutputBounds": [
+              24,
+              25,
+              114,
+              118
+            ]
+          },
+          {
+            "frame": 5,
+            "sourceRect": [
+              444,
+              444,
+              887,
+              887
+            ],
+            "sourceAnchor": [
+              118.5,
+              376
+            ],
+            "targetAnchor": [
+              28,
+              118
+            ],
+            "resampledCell": [
+              126,
+              126
+            ],
+            "pasteOffset": [
+              -6,
+              11
+            ],
+            "opaqueOutputBounds": [
+              24,
+              25,
+              114,
+              118
+            ]
+          },
+          {
+            "frame": 6,
+            "sourceRect": [
+              887,
+              444,
+              1330,
+              887
+            ],
+            "sourceAnchor": [
+              101.0,
+              376
+            ],
+            "targetAnchor": [
+              28,
+              118
+            ],
+            "resampledCell": [
+              126,
+              126
+            ],
+            "pasteOffset": [
+              -1,
+              11
+            ],
+            "opaqueOutputBounds": [
+              24,
+              25,
+              114,
+              118
+            ]
+          },
+          {
+            "frame": 7,
+            "sourceRect": [
+              1330,
+              444,
+              1774,
+              887
+            ],
+            "sourceAnchor": [
+              85.5,
+              376
+            ],
+            "targetAnchor": [
+              28,
+              118
+            ],
+            "resampledCell": [
+              127,
+              126
+            ],
+            "pasteOffset": [
+              4,
+              11
+            ],
+            "opaqueOutputBounds": [
+              25,
+              25,
+              114,
+              118
+            ]
+          }
+        ]
+      },
+      "visualQa": [
+        "Eight genuine cloth-shape phases with distinct crests and troughs.",
+        "The AI source has pole-anchor drift between columns and rows; deterministic rigid anchor placement corrects the canvas positions.",
+        "Cloth phase increments are approximate and not physics-based; do not claim seamless or simulated cloth."
+      ],
+      "adjacentRgbDifferenceIndicative": [
+        26,
+        24,
+        51,
+        22,
+        35,
+        37,
+        36,
+        10
+      ],
+      "originalSha256": "a28d0e6cb50d541966cbc70d6b163270d5e61ab203cd9e3c8900658001782cf1",
+      "originalBytes": 611346
+    }
+  ],
+  "originalPublication": {
+    "status": "deferred",
+    "includedInThisRelease": false,
+    "note": "Large AI originals are omitted from this partial release. Their paths and hashes identify creation-stage sources, not downloads. Reproduce extraction from the published prepared inputs."
+  },
+  "contactSheetPublication": {
+    "omittedInThisRelease": [
+      "robot-walk-contact.jpg",
+      "mascot-expression-contact.jpg"
+    ],
+    "note": "Optional neutral-background QA composites omitted; the original prepared RGBA input PNGs are included."
+  }
+}

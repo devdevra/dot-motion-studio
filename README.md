@@ -128,6 +128,16 @@
 **데모의 범위:** 입력 골프공 이미지는 데모용으로 별도의 이미지 생성 도구에서 만든 뒤 96×96 PNG로 준비한 에셋입니다. Studio는 그 한 장을 이동했으며 골프 스윙·새 포즈를 생성하지 않았습니다. MP4는 실제 출력 PNG를 별도의 FFmpeg 제작 과정으로 조립한 설명 자료이고, Studio의 네이티브 영상 출력이나 웹 UI 화면 녹화가 아닙니다. 이 로컬 엔진 실행은 실서비스의 MCP 플러그인 연결 성공을 의미하지 않습니다.
 
 
+### 로봇·마스코트·깃발: 움직이는 3종 예제
+
+[![실제 엔진으로 추출한 로봇·마스코트·깃발 예제](docs/cases/dot-motion-cases-poster.png)](docs/cases/README.md)
+
+- **4초 MP4:** [로봇 제자리 걷기](docs/cases/outputs/robot-walk/robot-walk-preview.mp4) · [마스코트 표정 전환](docs/cases/outputs/mascot-expression/mascot-expression-preview.mp4) · [깃발 펄럭임](docs/cases/outputs/flag-wave/flag-wave-preview.mp4)
+- [24프레임 비교 이미지](docs/cases/dot-motion-cases-contact-sheet.png) · [입력 PNG·아틀라스·JSON·ZIP·재현 방법](docs/cases/README.md)
+- 각 사례의 4×2 입력에서 8개 PNG를 실제 엔진으로 추출했습니다. 로봇·마스코트는 8 FPS, 깃발은 12 FPS로 원래 그려진 포즈를 재생합니다.
+- 새 포즈는 AI 원본에 이미 포함되어 있습니다. 엔진은 포즈를 생성하거나 보간하지 않으며, 개별 MP4는 별도 FFmpeg로 조립했습니다. 원본의 모양 차이와 반복 경계의 튐은 남습니다.
+- 이번 공개 묶음은 준비된 입력부터 재현할 수 있습니다. 36초 통합 MP4·빠른 GIF·큰 AI 원본 3개는 아직 포함하지 않았습니다.
+
 ### 추가 샘플: 한글 타이포그래픽과 골프 스윙
 
 **한글 타이포그래픽 · “골프의 순간”**

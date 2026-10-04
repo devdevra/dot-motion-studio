@@ -1,0 +1,815 @@
+{
+  "scope": "Local production engine runPipeline; not live MCP or UI verification",
+  "source": "Original AI-generated pre-drawn frame sheets; generation is separate from this engine",
+  "engine": {
+    "path": "lib/motion-engine.mjs",
+    "sha256": "00f584ec0799072983f80914929fc7ddf304731be28ab773b0c31fa1f9277659"
+  },
+  "options": "Explicit 4×2 row-major grid; preserve 128×128 cells and all source anchors; no trimming, no translation, no interpolation",
+  "cases": [
+    {
+      "id": "robot-walk",
+      "title": "로봇 제자리 걷기",
+      "fps": 8,
+      "input": {
+        "path": "inputs/robot-walk.png",
+        "bytes": 123959,
+        "sha256": "d2597854885338bc451a8e700d262857c33f4e7fc79ad2af910778ef68aa1afa",
+        "inspection": {
+          "width": 512,
+          "height": 256,
+          "bitDepth": 8,
+          "colorType": 6,
+          "pixelCount": 131072,
+          "interlaced": false,
+          "hasAlphaChannel": true,
+          "hasTransparencyMetadata": false,
+          "opaquePixels": 2472,
+          "transparentPixels": 91849,
+          "partialAlphaPixels": 36751,
+          "hasTransparency": true,
+          "bounds": {
+            "x": 27,
+            "y": 4,
+            "width": 463,
+            "height": 245
+          }
+        }
+      },
+      "options": {
+        "name": "robot-walk",
+        "fps": 8,
+        "source": {
+          "kind": "grid",
+          "columns": 4,
+          "rows": 2,
+          "count": 8,
+          "margin": 0,
+          "spacing": 0
+        },
+        "alphaThreshold": 0,
+        "normalize": {
+          "trim": false,
+          "padding": 0,
+          "width": 128,
+          "height": 128,
+          "align": "center"
+        },
+        "atlasColumns": 4
+      },
+      "summary": {
+        "frameCount": 8,
+        "frameWidth": 128,
+        "frameHeight": 128,
+        "atlasWidth": 512,
+        "atlasHeight": 256,
+        "fps": 8
+      },
+      "files": {
+        "robot-walk-atlas.png": {
+          "bytes": 132167,
+          "sha256": "10f98b437080fe2f5df17b39b3f0d651279e9d0a7d625503a1c574292539d7c4"
+        },
+        "robot-walk-atlas.json": {
+          "bytes": 3510,
+          "sha256": "719486488102306eae949304029e00f07a0b8417c8ed09c207b9e252d8332a90"
+        },
+        "robot-walk-frames.zip": {
+          "bytes": 139654,
+          "sha256": "b458d7ec845c3bb28faff6b4ce46f90ef67a9d41fb565ee43a1d5495bcb41f7a"
+        },
+        "robot-walk-options.json": {
+          "bytes": 323,
+          "sha256": "fc9b74fcd3af2078b71f2bc9a751ccd5e868b55e76ac0596153378bf913c4954"
+        }
+      },
+      "frames": [
+        {
+          "name": "robot-walk-001.png",
+          "sha256": "aac81d23f442e25ee89a9d8238b903f38b23ca1e23c53974e491362b919eb6d7",
+          "bytes": 17604,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 330,
+            "transparentPixels": 11265,
+            "partialAlphaPixels": 4789,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 29,
+              "y": 6,
+              "width": 73,
+              "height": 114
+            }
+          },
+          "nextFrameDifferentPixels": 5811,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "robot-walk-002.png",
+          "sha256": "067fcb452fde57c4ea0e36fa8a971a4d46e11cad9f803d7d0cfef1b0fc342b50",
+          "bytes": 16524,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 290,
+            "transparentPixels": 11565,
+            "partialAlphaPixels": 4529,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 30,
+              "y": 12,
+              "width": 70,
+              "height": 109
+            }
+          },
+          "nextFrameDifferentPixels": 5604,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "robot-walk-003.png",
+          "sha256": "02d1acd0dd9e495b37600ab41df5492c7ba3bd686667bdd6e91ea07fdcb979b6",
+          "bytes": 16848,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 302,
+            "transparentPixels": 11509,
+            "partialAlphaPixels": 4573,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 27,
+              "y": 10,
+              "width": 74,
+              "height": 111
+            }
+          },
+          "nextFrameDifferentPixels": 5648,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "robot-walk-004.png",
+          "sha256": "e729e5fd2d123e5222bbff2bd0532555c180a5dc3c15ec4a74abe1c1143ffab7",
+          "bytes": 16624,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 302,
+            "transparentPixels": 11565,
+            "partialAlphaPixels": 4517,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 33,
+              "y": 4,
+              "width": 69,
+              "height": 117
+            }
+          },
+          "nextFrameDifferentPixels": 5951,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "robot-walk-005.png",
+          "sha256": "35e73ab98a634e23848bc55a8bd92982a4239d97f4d5305ce03cd67d53549e06",
+          "bytes": 17781,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 329,
+            "transparentPixels": 11259,
+            "partialAlphaPixels": 4796,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 27,
+              "y": 8,
+              "width": 91,
+              "height": 112
+            }
+          },
+          "nextFrameDifferentPixels": 5745,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "robot-walk-006.png",
+          "sha256": "5de3dff3ab14f3145fd021bc6db912797827463ca409793c178be28e9db26b1a",
+          "bytes": 16654,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 310,
+            "transparentPixels": 11556,
+            "partialAlphaPixels": 4518,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 30,
+              "y": 13,
+              "width": 89,
+              "height": 107
+            }
+          },
+          "nextFrameDifferentPixels": 5467,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "robot-walk-007.png",
+          "sha256": "efe6da774d992a18ca44cb4efeb0653c8c97def518d74b5b95c657be647c53ab",
+          "bytes": 16435,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 300,
+            "transparentPixels": 11578,
+            "partialAlphaPixels": 4506,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 30,
+              "y": 7,
+              "width": 83,
+              "height": 114
+            }
+          },
+          "nextFrameDifferentPixels": 5586,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "robot-walk-008.png",
+          "sha256": "696ca1b1926cb7430473856b22181daffae6c96ff328147e686780689ff45d8a",
+          "bytes": 16639,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 309,
+            "transparentPixels": 11552,
+            "partialAlphaPixels": 4523,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 32,
+              "y": 6,
+              "width": 74,
+              "height": 114
+            }
+          },
+          "nextFrameDifferentPixels": 5744,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        }
+      ],
+      "checks": {
+        "frameOrder": "row-major, left-to-right then next row; exact pixel comparison passed",
+        "alphaPreserved": "All nonzero alpha preserved. Original invisible RGB cleared only at alpha=0.",
+        "loop": "Metadata loop=true is a playback hint; source-pose continuity must be reviewed visually, not guaranteed by extraction."
+      }
+    },
+    {
+      "id": "mascot-expression",
+      "title": "마스코트 표정 전환",
+      "fps": 8,
+      "input": {
+        "path": "inputs/mascot-expression.png",
+        "bytes": 126682,
+        "sha256": "bdb018fcbecbe5ea04b676fce345bf62a5fe514d3d632afae179e8d01637c77d",
+        "inspection": {
+          "width": 512,
+          "height": 256,
+          "bitDepth": 8,
+          "colorType": 6,
+          "pixelCount": 131072,
+          "interlaced": false,
+          "hasAlphaChannel": true,
+          "hasTransparencyMetadata": false,
+          "opaquePixels": 1929,
+          "transparentPixels": 69179,
+          "partialAlphaPixels": 59964,
+          "hasTransparency": true,
+          "bounds": {
+            "x": 11,
+            "y": 27,
+            "width": 490,
+            "height": 222
+          }
+        }
+      },
+      "options": {
+        "name": "mascot-expression",
+        "fps": 8,
+        "source": {
+          "kind": "grid",
+          "columns": 4,
+          "rows": 2,
+          "count": 8,
+          "margin": 0,
+          "spacing": 0
+        },
+        "alphaThreshold": 0,
+        "normalize": {
+          "trim": false,
+          "padding": 0,
+          "width": 128,
+          "height": 128,
+          "align": "center"
+        },
+        "atlasColumns": 4
+      },
+      "summary": {
+        "frameCount": 8,
+        "frameWidth": 128,
+        "frameHeight": 128,
+        "atlasWidth": 512,
+        "atlasHeight": 256,
+        "fps": 8
+      },
+      "files": {
+        "mascot-expression-atlas.png": {
+          "bytes": 146616,
+          "sha256": "b86a620ce6cb079c7e5cfc710dbc4ef941b76f3c40105f135c4a157532ee363e"
+        },
+        "mascot-expression-atlas.json": {
+          "bytes": 3573,
+          "sha256": "8c134e4ed282b9b1652d468b337c012842806a2c50284231b98362824540858d"
+        },
+        "mascot-expression-frames.zip": {
+          "bytes": 165403,
+          "sha256": "f6c44e6abf4f06014e4f06a3e1d1620959b05cfa08231390758822b1f2028967"
+        },
+        "mascot-expression-options.json": {
+          "bytes": 330,
+          "sha256": "0c20dd99961159ae352b355bc169f13d460e94829ffaa8be3b999d52599c38ab"
+        }
+      },
+      "frames": [
+        {
+          "name": "mascot-expression-001.png",
+          "sha256": "cdbb9b5482cb8bb51705addb271184dd84804ec78421eaf3761ea2d4f2ed98a8",
+          "bytes": 20089,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 235,
+            "transparentPixels": 8670,
+            "partialAlphaPixels": 7479,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 11,
+              "y": 27,
+              "width": 111,
+              "height": 94
+            }
+          },
+          "nextFrameDifferentPixels": 7324,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "mascot-expression-002.png",
+          "sha256": "c35c63741c00df566526501e6e2683ad73c712244971c373a2ee3461019765ee",
+          "bytes": 19946,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 239,
+            "transparentPixels": 8640,
+            "partialAlphaPixels": 7505,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 4,
+              "y": 27,
+              "width": 114,
+              "height": 94
+            }
+          },
+          "nextFrameDifferentPixels": 7350,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "mascot-expression-003.png",
+          "sha256": "f9a7e3e3e7b4170729eaa95dca0ef137e8aaf23ebd1840d367eb2aeaaaa4c90c",
+          "bytes": 19824,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 235,
+            "transparentPixels": 8644,
+            "partialAlphaPixels": 7505,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 11,
+              "y": 27,
+              "width": 107,
+              "height": 94
+            }
+          },
+          "nextFrameDifferentPixels": 7383,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "mascot-expression-004.png",
+          "sha256": "07c191cc2e76b0ff1e440c1d010b24709ecc57130660c2fdb977181b107714b7",
+          "bytes": 19965,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 238,
+            "transparentPixels": 8665,
+            "partialAlphaPixels": 7481,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 4,
+              "y": 27,
+              "width": 113,
+              "height": 98
+            }
+          },
+          "nextFrameDifferentPixels": 7568,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "mascot-expression-005.png",
+          "sha256": "61867334389bbcb29d640432dcd13169c110334b19db8597595078f8710f0722",
+          "bytes": 20152,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 247,
+            "transparentPixels": 8651,
+            "partialAlphaPixels": 7486,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 11,
+              "y": 27,
+              "width": 107,
+              "height": 94
+            }
+          },
+          "nextFrameDifferentPixels": 7447,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "mascot-expression-006.png",
+          "sha256": "4642206ee9d965b48cf19f87a25b841c1319ff2cdb6660cfe8e1f6c69c2e1532",
+          "bytes": 20348,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 247,
+            "transparentPixels": 8610,
+            "partialAlphaPixels": 7527,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 6,
+              "y": 14,
+              "width": 112,
+              "height": 107
+            }
+          },
+          "nextFrameDifferentPixels": 7407,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "mascot-expression-007.png",
+          "sha256": "0dc10cd08310edc094821882f7c2506eeaba75f7afc762d2998ecdc920a38bd3",
+          "bytes": 20198,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 243,
+            "transparentPixels": 8641,
+            "partialAlphaPixels": 7500,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 9,
+              "y": 22,
+              "width": 109,
+              "height": 99
+            }
+          },
+          "nextFrameDifferentPixels": 7460,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "mascot-expression-008.png",
+          "sha256": "6a5f39a5a1d3a81875f0698660659905c5b556d1a3ef1b87c887703cc9509c6c",
+          "bytes": 20147,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 245,
+            "transparentPixels": 8658,
+            "partialAlphaPixels": 7481,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 11,
+              "y": 27,
+              "width": 106,
+              "height": 94
+            }
+          },
+          "nextFrameDifferentPixels": 7645,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        }
+      ],
+      "checks": {
+        "frameOrder": "row-major, left-to-right then next row; exact pixel comparison passed",
+        "alphaPreserved": "All nonzero alpha preserved. Original invisible RGB cleared only at alpha=0.",
+        "loop": "Metadata loop=true is a playback hint; source-pose continuity must be reviewed visually, not guaranteed by extraction."
+      }
+    },
+    {
+      "id": "flag-wave",
+      "title": "깃발 펄럭임",
+      "fps": 12,
+      "input": {
+        "path": "inputs/flag-wave.png",
+        "bytes": 71325,
+        "sha256": "b5ae2f9990828a7bc569bf78f24c0a89baf039abb7212462e5c0b9959b085530",
+        "inspection": {
+          "width": 512,
+          "height": 256,
+          "bitDepth": 8,
+          "colorType": 6,
+          "pixelCount": 131072,
+          "interlaced": false,
+          "hasAlphaChannel": true,
+          "hasTransparencyMetadata": false,
+          "opaquePixels": 2572,
+          "transparentPixels": 98941,
+          "partialAlphaPixels": 29559,
+          "hasTransparency": true,
+          "bounds": {
+            "x": 21,
+            "y": 21,
+            "width": 480,
+            "height": 228
+          }
+        }
+      },
+      "options": {
+        "name": "flag-wave",
+        "fps": 12,
+        "source": {
+          "kind": "grid",
+          "columns": 4,
+          "rows": 2,
+          "count": 8,
+          "margin": 0,
+          "spacing": 0
+        },
+        "alphaThreshold": 0,
+        "normalize": {
+          "trim": false,
+          "padding": 0,
+          "width": 128,
+          "height": 128,
+          "align": "center"
+        },
+        "atlasColumns": 4
+      },
+      "summary": {
+        "frameCount": 8,
+        "frameWidth": 128,
+        "frameHeight": 128,
+        "atlasWidth": 512,
+        "atlasHeight": 256,
+        "fps": 12
+      },
+      "files": {
+        "flag-wave-atlas.png": {
+          "bytes": 90072,
+          "sha256": "0f9ac6a1f04d2b3c4f103f4e8b7c91e74db42957008cde6ec1c33c471f7fb8ba"
+        },
+        "flag-wave-atlas.json": {
+          "bytes": 3494,
+          "sha256": "f9c047d0c00e5c4db6c871eceacc56384c2901867e7459b45c4ed5951d1f4f5a"
+        },
+        "flag-wave-frames.zip": {
+          "bytes": 98696,
+          "sha256": "51b8984996930d63ca315b6fd2f8f6b2e99f609066b7d29c1b4cdc5ebd83281c"
+        },
+        "flag-wave-options.json": {
+          "bytes": 323,
+          "sha256": "a25e394408619570e6ba969f903174ae47f6602d5fd8e3d21c3a85178d98cd76"
+        }
+      },
+      "frames": [
+        {
+          "name": "flag-wave-001.png",
+          "sha256": "76d6938eb8cbb1298bd345c91933be2e3f217aa5badfa5b7d9bea8b60a376159",
+          "bytes": 11890,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 355,
+            "transparentPixels": 12158,
+            "partialAlphaPixels": 3871,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 21,
+              "y": 21,
+              "width": 94,
+              "height": 99
+            }
+          },
+          "nextFrameDifferentPixels": 4387,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "flag-wave-002.png",
+          "sha256": "070065c1c9476ab706db9d4c8f4efa35d1c3a8fe6ec7933fc4e8c6788d435efd",
+          "bytes": 11670,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 297,
+            "transparentPixels": 12462,
+            "partialAlphaPixels": 3625,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 21,
+              "y": 22,
+              "width": 96,
+              "height": 98
+            }
+          },
+          "nextFrameDifferentPixels": 4086,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "flag-wave-003.png",
+          "sha256": "4857f55cc8878e2e9bd537efdf002373859d345a11f58b863bc5ad9c7373d16d",
+          "bytes": 11592,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 294,
+            "transparentPixels": 12602,
+            "partialAlphaPixels": 3488,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 21,
+              "y": 22,
+              "width": 104,
+              "height": 98
+            }
+          },
+          "nextFrameDifferentPixels": 4801,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "flag-wave-004.png",
+          "sha256": "07a4c5e346ba036686c6b881ff37cb4ce8c21909ac1ab259c306cfe2f468b141",
+          "bytes": 12007,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 352,
+            "transparentPixels": 12218,
+            "partialAlphaPixels": 3814,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 6,
+              "y": 22,
+              "width": 111,
+              "height": 98
+            }
+          },
+          "nextFrameDifferentPixels": 4378,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "flag-wave-005.png",
+          "sha256": "c1646d5e57f86e7bce19c7914bb65075e63d9d56d91e162c185edf8eddfd92a6",
+          "bytes": 11718,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 348,
+            "transparentPixels": 12373,
+            "partialAlphaPixels": 3663,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 21,
+              "y": 22,
+              "width": 95,
+              "height": 98
+            }
+          },
+          "nextFrameDifferentPixels": 4449,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "flag-wave-006.png",
+          "sha256": "1852f222965bb0dc47aae3f5afe372eae860223e7e6cd662d084d3a7a5e4f822",
+          "bytes": 11717,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 290,
+            "transparentPixels": 12530,
+            "partialAlphaPixels": 3564,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 21,
+              "y": 19,
+              "width": 96,
+              "height": 101
+            }
+          },
+          "nextFrameDifferentPixels": 4430,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "flag-wave-007.png",
+          "sha256": "6f3b7d1d41195c62b208999978ef96523c3bbdbec6f6e5068021d2477a5d835d",
+          "bytes": 11454,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 293,
+            "transparentPixels": 12504,
+            "partialAlphaPixels": 3587,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 21,
+              "y": 22,
+              "width": 96,
+              "height": 98
+            }
+          },
+          "nextFrameDifferentPixels": 4512,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        },
+        {
+          "name": "flag-wave-008.png",
+          "sha256": "395a886de438bba8740340e548ddf9b61174a3be6d703c1358273dae51b26680",
+          "bytes": 12137,
+          "inspection": {
+            "width": 128,
+            "height": 128,
+            "opaquePixels": 343,
+            "transparentPixels": 12094,
+            "partialAlphaPixels": 3947,
+            "hasTransparency": true,
+            "bounds": {
+              "x": 22,
+              "y": 22,
+              "width": 95,
+              "height": 99
+            }
+          },
+          "nextFrameDifferentPixels": 4356,
+          "sourceCellPixelMatch": true,
+          "atlasCellPixelMatch": true,
+          "anchorPreservedByEngine": true
+        }
+      ],
+      "checks": {
+        "frameOrder": "row-major, left-to-right then next row; exact pixel comparison passed",
+        "alphaPreserved": "All nonzero alpha preserved. Original invisible RGB cleared only at alpha=0.",
+        "loop": "Metadata loop=true is a playback hint; source-pose continuity must be reviewed visually, not guaranteed by extraction."
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "flag-wave",
+  "fps": 12,
+  "source": {
+    "kind": "grid",
+    "columns": 4,
+    "rows": 2,
+    "count": 8,
+    "margin": 0,
+    "spacing": 0
+  },
+  "alphaThreshold": 0,
+  "normalize": {
+    "trim": false,
+    "padding": 0,
+    "width": 128,
+    "height": 128,
+    "align": "center"
+  },
+  "atlasColumns": 4
+}
